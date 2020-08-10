@@ -58,6 +58,10 @@
 		29845ABF24E1AAB3004B22A9 /* GoEvents */ = {
 			isa = PBXGroup;
 			children = (
+				29845AD824E1DEB7004B22A9 /* Infra */,
+				29845ADC24E1DEFF004B22A9 /* Domain */,
+				29845ADA24E1DED2004B22A9 /* UI */,
+				29845ADD24E1DF09004B22A9 /* Main */,
 				29845AC024E1AAB3004B22A9 /* AppDelegate.swift */,
 				29845AC224E1AAB3004B22A9 /* SceneDelegate.swift */,
 				29845AC424E1AAB3004B22A9 /* ViewController.swift */,
@@ -68,6 +72,34 @@
 				29845AC924E1AAB3004B22A9 /* GoEvents.xcdatamodeld */,
 			);
 			path = GoEvents;
+			sourceTree = "<group>";
+		};
+		29845AD824E1DEB7004B22A9 /* Infra */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Infra;
+			sourceTree = "<group>";
+		};
+		29845ADA24E1DED2004B22A9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		29845ADC24E1DEFF004B22A9 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Domain;
+			sourceTree = "<group>";
+		};
+		29845ADD24E1DF09004B22A9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
