@@ -8,7 +8,6 @@ class AlamofireEventsService: EventsService {
         self.client = client
     }
     
-    
     func getEvents(onSucess: @escaping ([Events]) -> Void, onError: @escaping (DataError) -> Void) {
         client.create(type: [Events].self, onSuccess: { (events) in
             onSucess(events)
