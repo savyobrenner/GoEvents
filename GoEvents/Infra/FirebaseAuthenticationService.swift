@@ -27,14 +27,14 @@ class FirebaseAuthenticationService: AuthenticationService {
             if error != nil {
                 onSuccess()
             } else {
-            let tError = error.debugDescription
-            if tError == "FIRAuthErrorCodeInvalidEmail"{
-                onError(.FIRAuthErrorCodeInvalidEmail)
-            } else if tError == "FIRAuthErrorCodeWrongPassword"{
-                onError(.FIRAuthErrorCodeWrongPassword)
+                let tError = error.debugDescription
+                if tError == "FIRAuthErrorCodeInvalidEmail"{
+                    onError(.FIRAuthErrorCodeInvalidEmail)
+                } else if tError == "FIRAuthErrorCodeWrongPassword"{
+                    onError(.FIRAuthErrorCodeWrongPassword)
+                }
             }
         }
-    }
     }
     
     func isAlreadyLogged(onSucess: @escaping () -> Void) {
@@ -44,15 +44,15 @@ class FirebaseAuthenticationService: AuthenticationService {
             }
         }
     }
-
+    
     func logoutUser(onSuccess: () -> Void, onError: () -> Void) {
-         do {
-                   try self.auth.signOut()
-                   onSuccess()
-               }catch{
-                   onError ()
-               }
+        do {
+            try self.auth.signOut()
+            onSuccess()
+        }catch{
+            onError ()
         }
+    }
     
     func recoveryThePassowrd(email: String, onSuccess: @escaping () -> Void, onError: @escaping () -> Void) {
         auth.sendPasswordReset(withEmail: email) { error in
