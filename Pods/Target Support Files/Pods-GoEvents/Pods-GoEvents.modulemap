@@ -1,0 +1,6 @@
+framework module Pods_GoEvents {
+  umbrella header "Pods-GoEvents-umbrella.h"
+
+  export *
+  module * { export * }
+}

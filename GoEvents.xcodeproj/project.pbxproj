@@ -14,6 +14,7 @@
 		29845ACB24E1AAB3004B22A9 /* GoEvents.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 29845AC924E1AAB3004B22A9 /* GoEvents.xcdatamodeld */; };
 		29845ACD24E1AAB9004B22A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29845ACC24E1AAB9004B22A9 /* Assets.xcassets */; };
 		29845AD024E1AAB9004B22A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29845ACE24E1AAB9004B22A9 /* LaunchScreen.storyboard */; };
+		5C4AE2B8123DB6D6670C8748 /* Pods_GoEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B381BBAD188866D7C35E57B5 /* Pods_GoEvents.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		29845ACC24E1AAB9004B22A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29845ACF24E1AAB9004B22A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29845AD124E1AAB9004B22A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AFC296FE5856D847F627185 /* Pods-GoEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoEvents.release.xcconfig"; path = "Target Support Files/Pods-GoEvents/Pods-GoEvents.release.xcconfig"; sourceTree = "<group>"; };
+		B381BBAD188866D7C35E57B5 /* Pods_GoEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0EDC778297C4CC7A798B97 /* Pods-GoEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoEvents.debug.xcconfig"; path = "Target Support Files/Pods-GoEvents/Pods-GoEvents.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C4AE2B8123DB6D6670C8748 /* Pods_GoEvents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				29845ABF24E1AAB3004B22A9 /* GoEvents */,
 				29845ABE24E1AAB3004B22A9 /* Products */,
+				DA2889B3E9B9295F814CE152 /* Pods */,
+				8CB914FD35DB06FE7337E6DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +109,24 @@
 			name = Main;
 			sourceTree = "<group>";
 		};
+		8CB914FD35DB06FE7337E6DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B381BBAD188866D7C35E57B5 /* Pods_GoEvents.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA2889B3E9B9295F814CE152 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA0EDC778297C4CC7A798B97 /* Pods-GoEvents.debug.xcconfig */,
+				6AFC296FE5856D847F627185 /* Pods-GoEvents.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29845AD424E1AAB9004B22A9 /* Build configuration list for PBXNativeTarget "GoEvents" */;
 			buildPhases = (
+				8C9E59EB597B9C52DB091DB8 /* [CP] Check Pods Manifest.lock */,
 				29845AB924E1AAB3004B22A9 /* Sources */,
 				29845ABA24E1AAB3004B22A9 /* Frameworks */,
 				29845ABB24E1AAB3004B22A9 /* Resources */,
+				66A406B993D645068B2FFF95 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,6 +194,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		66A406B993D645068B2FFF95 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoEvents/Pods-GoEvents-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoEvents/Pods-GoEvents-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoEvents/Pods-GoEvents-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C9E59EB597B9C52DB091DB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoEvents-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		29845AB924E1AAB3004B22A9 /* Sources */ = {
@@ -318,6 +387,7 @@
 		};
 		29845AD524E1AAB9004B22A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA0EDC778297C4CC7A798B97 /* Pods-GoEvents.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -336,6 +406,7 @@
 		};
 		29845AD624E1AAB9004B22A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AFC296FE5856D847F627185 /* Pods-GoEvents.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
