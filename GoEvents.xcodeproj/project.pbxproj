@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		29845AC124E1AAB3004B22A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29845AC024E1AAB3004B22A9 /* AppDelegate.swift */; };
 		29845AC324E1AAB3004B22A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29845AC224E1AAB3004B22A9 /* SceneDelegate.swift */; };
-		29845AC524E1AAB3004B22A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29845AC424E1AAB3004B22A9 /* ViewController.swift */; };
 		29845AC824E1AAB3004B22A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29845AC624E1AAB3004B22A9 /* Main.storyboard */; };
 		29845ACB24E1AAB3004B22A9 /* GoEvents.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 29845AC924E1AAB3004B22A9 /* GoEvents.xcdatamodeld */; };
 		29845ACD24E1AAB9004B22A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29845ACC24E1AAB9004B22A9 /* Assets.xcassets */; };
@@ -19,6 +18,7 @@
 		29845AE424E2CC10004B22A9 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29845AE324E2CC10004B22A9 /* DataError.swift */; };
 		29845AE824E2CCE3004B22A9 /* ClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29845AE724E2CCE3004B22A9 /* ClientFactory.swift */; };
 		29845AF024E2CF6D004B22A9 /* AlamofireEventsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29845AEF24E2CF6D004B22A9 /* AlamofireEventsService.swift */; };
+		29845AF424E2D232004B22A9 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29845AF324E2D232004B22A9 /* Injection.swift */; };
 		5C4AE2B8123DB6D6670C8748 /* Pods_GoEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B381BBAD188866D7C35E57B5 /* Pods_GoEvents.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,6 @@
 		29845ABD24E1AAB3004B22A9 /* GoEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29845AC024E1AAB3004B22A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29845AC224E1AAB3004B22A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		29845AC424E1AAB3004B22A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		29845AC724E1AAB3004B22A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		29845ACA24E1AAB3004B22A9 /* GoEvents.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GoEvents.xcdatamodel; sourceTree = "<group>"; };
 		29845ACC24E1AAB9004B22A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,6 +36,7 @@
 		29845AE324E2CC10004B22A9 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
 		29845AE724E2CCE3004B22A9 /* ClientFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientFactory.swift; sourceTree = "<group>"; };
 		29845AEF24E2CF6D004B22A9 /* AlamofireEventsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireEventsService.swift; sourceTree = "<group>"; };
+		29845AF324E2D232004B22A9 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		6AFC296FE5856D847F627185 /* Pods-GoEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoEvents.release.xcconfig"; path = "Target Support Files/Pods-GoEvents/Pods-GoEvents.release.xcconfig"; sourceTree = "<group>"; };
 		B381BBAD188866D7C35E57B5 /* Pods_GoEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0EDC778297C4CC7A798B97 /* Pods-GoEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoEvents.debug.xcconfig"; path = "Target Support Files/Pods-GoEvents/Pods-GoEvents.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 				29845AE924E2CDE5004B22A9 /* Infra */,
 				29845AEC24E2CE08004B22A9 /* Domain */,
 				29845AEB24E2CDF7004B22A9 /* UI */,
-				29845AEA24E2CDF3004B22A9 /* Main */,
+				29F4A1E424E2D45800F3D015 /* Main */,
 			);
 			path = GoEvents;
 			sourceTree = "<group>";
@@ -101,24 +101,12 @@
 			path = Infra;
 			sourceTree = "<group>";
 		};
-		29845AEA24E2CDF3004B22A9 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				29845AC024E1AAB3004B22A9 /* AppDelegate.swift */,
-				29845AC224E1AAB3004B22A9 /* SceneDelegate.swift */,
-				29845ACC24E1AAB9004B22A9 /* Assets.xcassets */,
-				29845AD124E1AAB9004B22A9 /* Info.plist */,
-				29845AC924E1AAB3004B22A9 /* GoEvents.xcdatamodeld */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
 		29845AEB24E2CDF7004B22A9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				29845AC424E1AAB3004B22A9 /* ViewController.swift */,
 				29845AC624E1AAB3004B22A9 /* Main.storyboard */,
 				29845ACE24E1AAB9004B22A9 /* LaunchScreen.storyboard */,
+				29845AF324E2D232004B22A9 /* Injection.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -147,6 +135,18 @@
 				29845AE124E2CB9D004B22A9 /* EventsService.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		29F4A1E424E2D45800F3D015 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				29845AC024E1AAB3004B22A9 /* AppDelegate.swift */,
+				29845AC224E1AAB3004B22A9 /* SceneDelegate.swift */,
+				29845AD124E1AAB9004B22A9 /* Info.plist */,
+				29845ACC24E1AAB9004B22A9 /* Assets.xcassets */,
+				29845AC924E1AAB3004B22A9 /* GoEvents.xcdatamodeld */,
+			);
+			name = Main;
 			sourceTree = "<group>";
 		};
 		8CB914FD35DB06FE7337E6DF /* Frameworks */ = {
@@ -284,10 +284,10 @@
 				29845AE224E2CB9D004B22A9 /* EventsService.swift in Sources */,
 				29845ACB24E1AAB3004B22A9 /* GoEvents.xcdatamodeld in Sources */,
 				29845AF024E2CF6D004B22A9 /* AlamofireEventsService.swift in Sources */,
-				29845AC524E1AAB3004B22A9 /* ViewController.swift in Sources */,
 				29845AC124E1AAB3004B22A9 /* AppDelegate.swift in Sources */,
 				29845AE424E2CC10004B22A9 /* DataError.swift in Sources */,
 				29845AE824E2CCE3004B22A9 /* ClientFactory.swift in Sources */,
+				29845AF424E2D232004B22A9 /* Injection.swift in Sources */,
 				29845AC324E1AAB3004B22A9 /* SceneDelegate.swift in Sources */,
 				29845ADF24E2CAE8004B22A9 /* Events.swift in Sources */,
 			);
