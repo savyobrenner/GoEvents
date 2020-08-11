@@ -26,7 +26,7 @@ class RegisterViewController: UIViewController {
         validateForms()
         
     }
-    
+        
     private func validateForms(){
         let nameIsEmpty = tfName.text?.isEmpty ?? true
         let emailIsEmpty = tfEmail.text?.isEmpty ?? true
@@ -69,7 +69,16 @@ class RegisterViewController: UIViewController {
            let password = tfPassword.text!
         
         injection.authenticationServices.createUser(email: email, password: password, onSuccess: { (uid) in
+            self.injection.database.savePersonalInformations(name: name, uid: uid)
             
+            self.injection.authenticationServices.verificationEmail {
+                
+                self.injection.alerts.showAlertWithDismiss(titulo: "Conta criada com suceeso!", mensagem: "Sua conta foi criada com sucesso, um email de confirmação foi enviado para o email informado, o login será possível após a confirmação.", on: self) {
+                    self.dismiss(animated: true, completion: nil)
+                }
+                
+                self.stopLoading()
+            }
 
         }) { (error) in
             if error == .FIRAuthErrorCodeEmailAlreadyInUse {

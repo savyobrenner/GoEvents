@@ -10,4 +10,13 @@ class Alerts{
         controller.present(alert, animated: true, completion: nil)
     }
     
+    func showAlertWithDismiss(titulo: String, mensagem: String, `on` controller: UIViewController, onSuccess: @escaping()->Void){
+        let alert = UIAlertController(title: titulo, message: mensagem, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            onSuccess()
+        }
+        alert.addAction(okAction)
+        controller.present(alert, animated: true, completion: nil)
+    }
+    
 }

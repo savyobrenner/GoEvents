@@ -5,6 +5,7 @@ class Injection {
     let loading = Loading()
     let authenticationServices = FirebaseAuthenticationService()
     let alerts = Alerts()
+    let database = FirebaseDatabaseService()
     
     init() {
         eventsService = AlamofireEventsService(client: clientInstance)

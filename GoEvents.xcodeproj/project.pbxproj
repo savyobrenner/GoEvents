@@ -81,6 +81,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2907E87924E34BB400A1B3D2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2907E86F24E326F200A1B3D2 /* RegisterViewController.swift */,
+				2907E87124E3270300A1B3D2 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		29845AB424E1AAB2004B22A9 = {
 			isa = PBXGroup;
 			children = (
@@ -133,13 +142,12 @@
 		29845AEB24E2CDF7004B22A9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2907E87924E34BB400A1B3D2 /* Login */,
 				29F4A1ED24E2EF8D00F3D015 /* Events */,
 				29F4A1F024E2F04600F3D015 /* Commons */,
 				29845AC624E1AAB3004B22A9 /* Main.storyboard */,
 				29845ACE24E1AAB9004B22A9 /* LaunchScreen.storyboard */,
 				29845AF324E2D232004B22A9 /* Injection.swift */,
-				2907E86F24E326F200A1B3D2 /* RegisterViewController.swift */,
-				2907E87124E3270300A1B3D2 /* LoginViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
