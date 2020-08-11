@@ -1,4 +1,5 @@
 import UIKit
+import Kingfisher
 
 class EventsTableViewCell: UITableViewCell {
     
@@ -19,10 +20,12 @@ class EventsTableViewCell: UITableViewCell {
     }
     
     func prepare(with event: Events){
-        ivEvent.image = nil
+        let url = URL(string: event.image)
         lbEventName.text = event.eventName
         lbEventDate.text = event.date
         lbTicketPrice.text = "R$\(event.price)"
+        ivEvent.kf.indicatorType = .activity
+        ivEvent.kf.setImage(with: url)
     }
 
 }
