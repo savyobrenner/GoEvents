@@ -6,17 +6,17 @@ class FirebaseAuthenticationService: AuthenticationService {
     
     func createUser(email: String, password: String, onSuccess: @escaping (String) -> Void, onError: @escaping (AuthenticationError) -> Void) {
         auth.createUser(withEmail: email, password: password) { (user, error) in
-            if error != nil {
+            if error == nil {
                 let userUID = user?.user.uid
                 onSuccess(userUID ?? "")
             } else {
-                let tError = error.debugDescription
-                if tError == "FIRAuthErrorCodeInvalidEmail"{
+                let tError = error?.localizedDescription
+                if tError == "The email address is badly formatted."{
+                    onError(.FIRAuthErrorCodeInvalidEmail)
+                } else if tError == "The email address is already in use by another account." {
                     onError(.FIRAuthErrorCodeEmailAlreadyInUse)
-                } else if tError == "FIRAuthErrorCodeEmailAlreadyInUse"{
-                    onError(.FIRAuthErrorCodeEmailAlreadyInUse)
-                } else if tError == "FIRAuthErrorCodeWeakPassword"{
-                    onError(.FIRAuthErrorCodeWeakPassword)
+                } else {
+                    onError(.genericError)
                 }
             }
         }

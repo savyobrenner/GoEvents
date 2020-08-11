@@ -213,12 +213,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="28U-AG-yyI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1122" y="-388"/>
+            <point key="canvasLocation" x="1109" y="-390"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="ofm-fd-7YU">
             <objects>
-                <viewController id="Iqa-Tp-3SE" sceneMemberID="viewController">
+                <viewController id="Iqa-Tp-3SE" customClass="RegisterViewController" customModule="GoEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cvq-Sp-EV4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -238,26 +238,31 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FPa-pX-pGy">
                                 <rect key="frame" x="20" y="116" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirme sua senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ivy-pX-Hoo">
-                                <rect key="frame" x="20" y="200" width="374" height="34"/>
+                                <rect key="frame" x="20" y="242" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" smartInsertDeleteType="no" textContentType="password"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NWs-st-GDX">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NWs-st-GDX">
                                 <rect key="frame" x="20" y="158" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJf-sZ-apP">
+                                <rect key="frame" x="20" y="200" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" smartInsertDeleteType="no" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Declaro ter mais que 14 anos." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBn-CH-a5s">
-                                <rect key="frame" x="20" y="246" width="317" height="18"/>
+                                <rect key="frame" x="20" y="288" width="317" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSF-UJ-I2Y">
-                                <rect key="frame" x="20" y="311" width="374" height="42"/>
+                                <rect key="frame" x="20" y="353" width="374" height="42"/>
                                 <color key="backgroundColor" red="0.0" green="0.4431372549" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="gVO-Cv-6O6"/>
@@ -271,18 +276,26 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="register:" destination="Iqa-Tp-3SE" eventType="touchUpInside" id="7rK-9K-hDf"/>
+                                </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b0f-EQ-N4l">
-                                <rect key="frame" x="345" y="240" width="51" height="31"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="b0f-EQ-N4l">
+                                <rect key="frame" x="345" y="282" width="51" height="31"/>
                                 <color key="tintColor" red="0.015686274510000001" green="0.4549019608" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="onTintColor" red="0.015686274510000001" green="0.4549019608" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                             </switch>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="1KR-09-aNq">
+                                <rect key="frame" x="185" y="355.66666666666669" width="37" height="37"/>
+                                <color key="color" red="0.015686274510000001" green="0.4549019608" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="OPc-TQ-eFB" firstAttribute="top" secondItem="upw-V9-tnn" secondAttribute="bottom" constant="34" id="0SX-rL-8SJ"/>
                             <constraint firstItem="upw-V9-tnn" firstAttribute="top" secondItem="gbV-qC-9Wz" secondAttribute="top" id="8LW-2p-vb7"/>
                             <constraint firstItem="gbV-qC-9Wz" firstAttribute="trailing" secondItem="FPa-pX-pGy" secondAttribute="trailing" constant="20" id="AQs-fp-4vJ"/>
+                            <constraint firstItem="gbV-qC-9Wz" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OPc-TQ-eFB" secondAttribute="trailing" symbolic="YES" id="AwD-ZB-EGT"/>
                             <constraint firstItem="NWs-st-GDX" firstAttribute="top" secondItem="FPa-pX-pGy" secondAttribute="bottom" constant="8" id="BXe-U2-q2e"/>
                             <constraint firstItem="OPc-TQ-eFB" firstAttribute="leading" secondItem="gbV-qC-9Wz" secondAttribute="leading" constant="20" id="E58-29-vIb"/>
                             <constraint firstItem="PSF-UJ-I2Y" firstAttribute="top" secondItem="b0f-EQ-N4l" secondAttribute="bottom" constant="40" id="E5C-d9-sEB"/>
@@ -291,24 +304,38 @@
                             <constraint firstItem="gbV-qC-9Wz" firstAttribute="trailing" secondItem="b0f-EQ-N4l" secondAttribute="trailing" constant="20" id="IZV-fz-jvL"/>
                             <constraint firstItem="b0f-EQ-N4l" firstAttribute="leading" secondItem="lBn-CH-a5s" secondAttribute="trailing" constant="8" id="Ncj-P5-TdJ"/>
                             <constraint firstItem="gbV-qC-9Wz" firstAttribute="trailing" secondItem="Ivy-pX-Hoo" secondAttribute="trailing" constant="20" id="Nrt-h8-Aen"/>
+                            <constraint firstItem="eJf-sZ-apP" firstAttribute="leading" secondItem="gbV-qC-9Wz" secondAttribute="leading" constant="20" id="P19-VR-n1G"/>
                             <constraint firstItem="FPa-pX-pGy" firstAttribute="leading" secondItem="gbV-qC-9Wz" secondAttribute="leading" constant="20" id="QCx-rQ-wpK"/>
                             <constraint firstItem="gbV-qC-9Wz" firstAttribute="trailing" secondItem="NWs-st-GDX" secondAttribute="trailing" constant="20" id="WaD-iY-LHn"/>
+                            <constraint firstItem="gbV-qC-9Wz" firstAttribute="trailing" secondItem="eJf-sZ-apP" secondAttribute="trailing" constant="20" id="Wib-FY-pNf"/>
                             <constraint firstItem="upw-V9-tnn" firstAttribute="trailing" secondItem="gbV-qC-9Wz" secondAttribute="trailing" id="XfB-am-SyI"/>
                             <constraint firstItem="FPa-pX-pGy" firstAttribute="top" secondItem="OPc-TQ-eFB" secondAttribute="bottom" constant="8" id="YW2-AT-dZe"/>
                             <constraint firstItem="upw-V9-tnn" firstAttribute="leading" secondItem="gbV-qC-9Wz" secondAttribute="leading" id="Zw9-hK-snI"/>
                             <constraint firstItem="NWs-st-GDX" firstAttribute="leading" secondItem="gbV-qC-9Wz" secondAttribute="leading" constant="20" id="dJc-nk-yst"/>
                             <constraint firstItem="lBn-CH-a5s" firstAttribute="top" secondItem="Ivy-pX-Hoo" secondAttribute="bottom" constant="12" id="dSe-hg-DhH"/>
                             <constraint firstItem="gbV-qC-9Wz" firstAttribute="trailing" secondItem="PSF-UJ-I2Y" secondAttribute="trailing" constant="20" id="h9V-X3-Ze8"/>
+                            <constraint firstItem="1KR-09-aNq" firstAttribute="leading" secondItem="PSF-UJ-I2Y" secondAttribute="trailing" constant="-209" id="hdX-hC-FhE"/>
+                            <constraint firstItem="eJf-sZ-apP" firstAttribute="top" secondItem="NWs-st-GDX" secondAttribute="bottom" constant="8" id="jUi-gj-yAF"/>
                             <constraint firstItem="lBn-CH-a5s" firstAttribute="leading" secondItem="gbV-qC-9Wz" secondAttribute="leading" constant="20" id="p0y-Kt-bkR"/>
+                            <constraint firstItem="Ivy-pX-Hoo" firstAttribute="top" secondItem="eJf-sZ-apP" secondAttribute="bottom" constant="8" id="pgF-66-Qif"/>
                             <constraint firstItem="Ivy-pX-Hoo" firstAttribute="leading" secondItem="gbV-qC-9Wz" secondAttribute="leading" constant="20" id="sRD-MT-2RC"/>
-                            <constraint firstItem="Ivy-pX-Hoo" firstAttribute="top" secondItem="NWs-st-GDX" secondAttribute="bottom" constant="8" id="xtf-wS-QHo"/>
+                            <constraint firstItem="1KR-09-aNq" firstAttribute="centerY" secondItem="PSF-UJ-I2Y" secondAttribute="centerY" id="tAP-Ta-6Kg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gbV-qC-9Wz"/>
                     </view>
+                    <connections>
+                        <outlet property="btRegister" destination="PSF-UJ-I2Y" id="DjQ-qv-rdn"/>
+                        <outlet property="loading" destination="1KR-09-aNq" id="o5p-DT-rNt"/>
+                        <outlet property="swAge" destination="b0f-EQ-N4l" id="rGB-M3-GjZ"/>
+                        <outlet property="tfConfirmPassowrd" destination="Ivy-pX-Hoo" id="Uaw-2H-CUl"/>
+                        <outlet property="tfEmail" destination="NWs-st-GDX" id="nVw-Lw-mdI"/>
+                        <outlet property="tfName" destination="FPa-pX-pGy" id="cjk-Hb-m7X"/>
+                        <outlet property="tfPassword" destination="eJf-sZ-apP" id="VZp-O9-o2l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kLI-73-dsJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1789" y="-389"/>
+            <point key="canvasLocation" x="1788.4057971014495" y="-389.67391304347831"/>
         </scene>
     </scenes>
     <resources>
