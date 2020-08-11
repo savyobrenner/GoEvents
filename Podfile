@@ -7,5 +7,6 @@ target 'GoEvents' do
 
   # Pods for GoEvents
   pod 'Alamofire'
+  pod 'Kingfisher'
 
 end
