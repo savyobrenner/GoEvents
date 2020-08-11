@@ -19,6 +19,8 @@
 		29845AE824E2CCE3004B22A9 /* ClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29845AE724E2CCE3004B22A9 /* ClientFactory.swift */; };
 		29845AF024E2CF6D004B22A9 /* AlamofireEventsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29845AEF24E2CF6D004B22A9 /* AlamofireEventsService.swift */; };
 		29845AF424E2D232004B22A9 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29845AF324E2D232004B22A9 /* Injection.swift */; };
+		29F4A1E824E2E23100F3D015 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F4A1E724E2E23100F3D015 /* EventsTableViewController.swift */; };
+		29F4A1EA24E2E29000F3D015 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F4A1E924E2E29000F3D015 /* EventsTableViewCell.swift */; };
 		5C4AE2B8123DB6D6670C8748 /* Pods_GoEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B381BBAD188866D7C35E57B5 /* Pods_GoEvents.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		29845AE724E2CCE3004B22A9 /* ClientFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientFactory.swift; sourceTree = "<group>"; };
 		29845AEF24E2CF6D004B22A9 /* AlamofireEventsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireEventsService.swift; sourceTree = "<group>"; };
 		29845AF324E2D232004B22A9 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		29F4A1E724E2E23100F3D015 /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
+		29F4A1E924E2E29000F3D015 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
 		6AFC296FE5856D847F627185 /* Pods-GoEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoEvents.release.xcconfig"; path = "Target Support Files/Pods-GoEvents/Pods-GoEvents.release.xcconfig"; sourceTree = "<group>"; };
 		B381BBAD188866D7C35E57B5 /* Pods_GoEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0EDC778297C4CC7A798B97 /* Pods-GoEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoEvents.debug.xcconfig"; path = "Target Support Files/Pods-GoEvents/Pods-GoEvents.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 		29845AEB24E2CDF7004B22A9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				29F4A1E724E2E23100F3D015 /* EventsTableViewController.swift */,
+				29F4A1E924E2E29000F3D015 /* EventsTableViewCell.swift */,
 				29845AC624E1AAB3004B22A9 /* Main.storyboard */,
 				29845ACE24E1AAB9004B22A9 /* LaunchScreen.storyboard */,
 				29845AF324E2D232004B22A9 /* Injection.swift */,
@@ -289,7 +295,9 @@
 				29845AE824E2CCE3004B22A9 /* ClientFactory.swift in Sources */,
 				29845AF424E2D232004B22A9 /* Injection.swift in Sources */,
 				29845AC324E1AAB3004B22A9 /* SceneDelegate.swift in Sources */,
+				29F4A1E824E2E23100F3D015 /* EventsTableViewController.swift in Sources */,
 				29845ADF24E2CAE8004B22A9 /* Events.swift in Sources */,
+				29F4A1EA24E2E29000F3D015 /* EventsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

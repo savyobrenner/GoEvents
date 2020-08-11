@@ -29,7 +29,7 @@
         <!--Eventos-->
         <scene sceneID="ZIw-Wv-25W">
             <objects>
-                <tableViewController id="si3-pY-kxh" sceneMemberID="viewController">
+                <tableViewController id="si3-pY-kxh" customClass="EventsTableViewController" customModule="GoEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="43d-Kz-ZcG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,7 +61,7 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="90" id="Y2I-WM-fDR">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="90" id="Y2I-WM-fDR" customClass="EventsTableViewCell" customModule="GoEvents" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="108" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y2I-WM-fDR" id="Fjs-jz-Ziv">
@@ -113,6 +113,12 @@
                                         <constraint firstItem="20t-L7-OtZ" firstAttribute="bottom" secondItem="pGn-Ns-fJC" secondAttribute="bottom" id="muE-Lt-Waw"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ivEvent" destination="pGn-Ns-fJC" id="bDR-aH-Zsh"/>
+                                    <outlet property="lbEventDate" destination="BSv-YU-iBZ" id="wBt-Eg-2e4"/>
+                                    <outlet property="lbEventName" destination="eeM-G8-vLd" id="oii-co-jb9"/>
+                                    <outlet property="lbTicketPrice" destination="20t-L7-OtZ" id="hMr-LW-qqv"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -124,7 +130,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VSI-le-Y5E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="189.85507246376812" y="-444.29347826086962"/>
+            <point key="canvasLocation" x="190" y="-388"/>
         </scene>
     </scenes>
     <resources>
