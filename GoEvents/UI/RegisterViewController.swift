@@ -69,9 +69,9 @@ class RegisterViewController: UIViewController {
            let password = tfPassword.text!
         
         injection.authenticationServices.createUser(email: email, password: password, onSuccess: { (uid) in
+            
 
         }) { (error) in
-            
             if error == .FIRAuthErrorCodeEmailAlreadyInUse {
                 self.injection.alerts.showAlert(titulo: "Conta não criada", mensagem: "O email informado já possui uma conta em nosso banco de dados.", on: self)
             } else if error == .FIRAuthErrorCodeInvalidEmail{
@@ -79,6 +79,7 @@ class RegisterViewController: UIViewController {
             } else if error == .genericError {
                 self.injection.alerts.showAlert(titulo: "Conta não criada", mensagem: "Não foi possível criar sua conta, tente novamente.", on: self)
             }
+            self.stopLoading()
         }
     }
     
