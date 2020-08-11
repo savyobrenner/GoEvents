@@ -2,23 +2,36 @@ import UIKit
 
 class EventsTableViewController: UITableViewController {
     
-    let inhection = Injection()
+    let injection = Injection()
     var events: [Events] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loadEvents()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 0
+        return events.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! EventsTableViewCell
+        
+        let event = events[indexPath.row]
+        cell.prepare(with: event)
+        
         return cell
+    }
+    
+    func loadEvents(){
+        DispatchQueue.main.async {
+            self.injection.eventsService.getEvents(onSucess: { (events) in
+                     self.events = events
+                     self.tableView.reloadData()
+                 }) { (error) in
+                     print(error)
+                 }
+             }
     }
 }
