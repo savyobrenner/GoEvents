@@ -10,7 +10,7 @@ protocol AuthenticationService {
     
     func logoutUser(onSuccess: () -> Void, onError: () -> Void) -> Void
     
-    func recoveryThePassowrd(email: String, onSuccess: @escaping () -> Void, onError: @escaping () -> Void) -> Void
+    func recoveryThePassowrd(email: String, onSuccess: @escaping () -> Void, onError: @escaping (AuthenticationError) -> Void) -> Void
     
     func currentUserUid() -> String
     

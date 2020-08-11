@@ -13,6 +13,7 @@
 		2907E87624E3460900A1B3D2 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2907E87524E3460900A1B3D2 /* DatabaseService.swift */; };
 		2907E87824E3498800A1B3D2 /* FirebaseDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2907E87724E3498800A1B3D2 /* FirebaseDatabaseService.swift */; };
 		2907E87B24E34EB200A1B3D2 /* RegisterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2907E87A24E34EB200A1B3D2 /* RegisterExtension.swift */; };
+		2907E87D24E3569B00A1B3D2 /* LoginExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2907E87C24E3569B00A1B3D2 /* LoginExtension.swift */; };
 		29845AC124E1AAB3004B22A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29845AC024E1AAB3004B22A9 /* AppDelegate.swift */; };
 		29845AC324E1AAB3004B22A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29845AC224E1AAB3004B22A9 /* SceneDelegate.swift */; };
 		29845AC824E1AAB3004B22A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29845AC624E1AAB3004B22A9 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		2907E87524E3460900A1B3D2 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		2907E87724E3498800A1B3D2 /* FirebaseDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabaseService.swift; sourceTree = "<group>"; };
 		2907E87A24E34EB200A1B3D2 /* RegisterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterExtension.swift; sourceTree = "<group>"; };
+		2907E87C24E3569B00A1B3D2 /* LoginExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginExtension.swift; sourceTree = "<group>"; };
 		29845ABD24E1AAB3004B22A9 /* GoEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29845AC024E1AAB3004B22A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29845AC224E1AAB3004B22A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				2907E87A24E34EB200A1B3D2 /* RegisterExtension.swift */,
 				2907E86F24E326F200A1B3D2 /* RegisterViewController.swift */,
+				2907E87C24E3569B00A1B3D2 /* LoginExtension.swift */,
 				2907E87124E3270300A1B3D2 /* LoginViewController.swift */,
 			);
 			path = Login;
@@ -362,6 +365,7 @@
 				29845AF424E2D232004B22A9 /* Injection.swift in Sources */,
 				2907E87824E3498800A1B3D2 /* FirebaseDatabaseService.swift in Sources */,
 				29845AC324E1AAB3004B22A9 /* SceneDelegate.swift in Sources */,
+				2907E87D24E3569B00A1B3D2 /* LoginExtension.swift in Sources */,
 				2907E87024E326F200A1B3D2 /* RegisterViewController.swift in Sources */,
 				29F4A1E824E2E23100F3D015 /* EventsTableViewController.swift in Sources */,
 				2907E87224E3270300A1B3D2 /* LoginViewController.swift in Sources */,

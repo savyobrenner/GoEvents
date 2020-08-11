@@ -58,13 +58,19 @@ class FirebaseAuthenticationService: AuthenticationService {
         }
     }
     
-    func recoveryThePassowrd(email: String, onSuccess: @escaping () -> Void, onError: @escaping () -> Void) {
+    func recoveryThePassowrd(email: String, onSuccess: @escaping () -> Void, onError: @escaping (AuthenticationError) -> Void) {
         auth.sendPasswordReset(withEmail: email) { error in
             if error == nil{
                 onSuccess()
-            }else{
-                print(error as Any)
-                onError()
+            } else{
+                let tError = error?.localizedDescription
+                if tError == "The email address is badly formatted." {
+                    onError(.FIRAuthErrorCodeInvalidEmail)
+                } else if tError == "There is no user record corresponding to this identifier. The user may have been deleted."{
+                    onError(.emailNotRegistred)
+                } else {
+                    onError(.genericError)
+                }
             }
         }
     }
