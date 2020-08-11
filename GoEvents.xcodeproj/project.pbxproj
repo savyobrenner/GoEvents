@@ -14,11 +14,11 @@
 		2907E87824E3498800A1B3D2 /* FirebaseDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2907E87724E3498800A1B3D2 /* FirebaseDatabaseService.swift */; };
 		2907E87B24E34EB200A1B3D2 /* RegisterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2907E87A24E34EB200A1B3D2 /* RegisterExtension.swift */; };
 		2907E87D24E3569B00A1B3D2 /* LoginExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2907E87C24E3569B00A1B3D2 /* LoginExtension.swift */; };
+		2907E87F24E35C1000A1B3D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2907E87E24E35C1000A1B3D2 /* Assets.xcassets */; };
 		29845AC124E1AAB3004B22A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29845AC024E1AAB3004B22A9 /* AppDelegate.swift */; };
 		29845AC324E1AAB3004B22A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29845AC224E1AAB3004B22A9 /* SceneDelegate.swift */; };
 		29845AC824E1AAB3004B22A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29845AC624E1AAB3004B22A9 /* Main.storyboard */; };
 		29845ACB24E1AAB3004B22A9 /* GoEvents.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 29845AC924E1AAB3004B22A9 /* GoEvents.xcdatamodeld */; };
-		29845ACD24E1AAB9004B22A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29845ACC24E1AAB9004B22A9 /* Assets.xcassets */; };
 		29845AD024E1AAB9004B22A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29845ACE24E1AAB9004B22A9 /* LaunchScreen.storyboard */; };
 		29845ADF24E2CAE8004B22A9 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29845ADE24E2CAE8004B22A9 /* Events.swift */; };
 		29845AE224E2CB9D004B22A9 /* EventsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29845AE124E2CB9D004B22A9 /* EventsService.swift */; };
@@ -45,12 +45,12 @@
 		2907E87724E3498800A1B3D2 /* FirebaseDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabaseService.swift; sourceTree = "<group>"; };
 		2907E87A24E34EB200A1B3D2 /* RegisterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterExtension.swift; sourceTree = "<group>"; };
 		2907E87C24E3569B00A1B3D2 /* LoginExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginExtension.swift; sourceTree = "<group>"; };
+		2907E87E24E35C1000A1B3D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29845ABD24E1AAB3004B22A9 /* GoEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29845AC024E1AAB3004B22A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29845AC224E1AAB3004B22A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		29845AC724E1AAB3004B22A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		29845ACA24E1AAB3004B22A9 /* GoEvents.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GoEvents.xcdatamodel; sourceTree = "<group>"; };
-		29845ACC24E1AAB9004B22A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29845ACF24E1AAB9004B22A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29845AD124E1AAB9004B22A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29845ADE24E2CAE8004B22A9 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
@@ -193,8 +193,8 @@
 				29845AC024E1AAB3004B22A9 /* AppDelegate.swift */,
 				29845AC224E1AAB3004B22A9 /* SceneDelegate.swift */,
 				29F4A1F124E3046500F3D015 /* GoogleService-Info.plist */,
+				2907E87E24E35C1000A1B3D2 /* Assets.xcassets */,
 				29845AD124E1AAB9004B22A9 /* Info.plist */,
-				29845ACC24E1AAB9004B22A9 /* Assets.xcassets */,
 				29845AC924E1AAB3004B22A9 /* GoEvents.xcdatamodeld */,
 			);
 			name = Main;
@@ -298,7 +298,7 @@
 			files = (
 				29845AD024E1AAB9004B22A9 /* LaunchScreen.storyboard in Resources */,
 				29F4A1F224E3046500F3D015 /* GoogleService-Info.plist in Resources */,
-				29845ACD24E1AAB9004B22A9 /* Assets.xcassets in Resources */,
+				2907E87F24E35C1000A1B3D2 /* Assets.xcassets in Resources */,
 				29845AC824E1AAB3004B22A9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
