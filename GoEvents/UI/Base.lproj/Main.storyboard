@@ -56,7 +56,7 @@
                             </constraints>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="Twu-9y-AyJ">
-                            <rect key="frame" x="0.0" y="226" width="414" height="3"/>
+                            <rect key="frame" x="0.0" y="226" width="414" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.0" green="0.4431372549" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
