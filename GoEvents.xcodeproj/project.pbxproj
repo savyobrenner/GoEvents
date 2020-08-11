@@ -10,6 +10,8 @@
 		2907E87024E326F200A1B3D2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2907E86F24E326F200A1B3D2 /* RegisterViewController.swift */; };
 		2907E87224E3270300A1B3D2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2907E87124E3270300A1B3D2 /* LoginViewController.swift */; };
 		2907E87424E3360900A1B3D2 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2907E87324E3360900A1B3D2 /* Alerts.swift */; };
+		2907E87624E3460900A1B3D2 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2907E87524E3460900A1B3D2 /* DatabaseService.swift */; };
+		2907E87824E3498800A1B3D2 /* FirebaseDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2907E87724E3498800A1B3D2 /* FirebaseDatabaseService.swift */; };
 		29845AC124E1AAB3004B22A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29845AC024E1AAB3004B22A9 /* AppDelegate.swift */; };
 		29845AC324E1AAB3004B22A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29845AC224E1AAB3004B22A9 /* SceneDelegate.swift */; };
 		29845AC824E1AAB3004B22A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29845AC624E1AAB3004B22A9 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 		2907E86F24E326F200A1B3D2 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2907E87124E3270300A1B3D2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2907E87324E3360900A1B3D2 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		2907E87524E3460900A1B3D2 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		2907E87724E3498800A1B3D2 /* FirebaseDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabaseService.swift; sourceTree = "<group>"; };
 		29845ABD24E1AAB3004B22A9 /* GoEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29845AC024E1AAB3004B22A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29845AC224E1AAB3004B22A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 				29845AE724E2CCE3004B22A9 /* ClientFactory.swift */,
 				29845AEF24E2CF6D004B22A9 /* AlamofireEventsService.swift */,
 				29F4A1F724E30AB600F3D015 /* FirebaseAuthenticationService.swift */,
+				2907E87724E3498800A1B3D2 /* FirebaseDatabaseService.swift */,
 			);
 			path = Infra;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 			children = (
 				29845AE124E2CB9D004B22A9 /* EventsService.swift */,
 				29F4A1F324E3080D00F3D015 /* AuthenticationService.swift */,
+				2907E87524E3460900A1B3D2 /* DatabaseService.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -337,11 +343,13 @@
 				29845AE224E2CB9D004B22A9 /* EventsService.swift in Sources */,
 				29845ACB24E1AAB3004B22A9 /* GoEvents.xcdatamodeld in Sources */,
 				29845AF024E2CF6D004B22A9 /* AlamofireEventsService.swift in Sources */,
+				2907E87624E3460900A1B3D2 /* DatabaseService.swift in Sources */,
 				29845AC124E1AAB3004B22A9 /* AppDelegate.swift in Sources */,
 				29845AE424E2CC10004B22A9 /* DataError.swift in Sources */,
 				29845AE824E2CCE3004B22A9 /* ClientFactory.swift in Sources */,
 				29F4A1F424E3080D00F3D015 /* AuthenticationService.swift in Sources */,
 				29845AF424E2D232004B22A9 /* Injection.swift in Sources */,
+				2907E87824E3498800A1B3D2 /* FirebaseDatabaseService.swift in Sources */,
 				29845AC324E1AAB3004B22A9 /* SceneDelegate.swift in Sources */,
 				2907E87024E326F200A1B3D2 /* RegisterViewController.swift in Sources */,
 				29F4A1E824E2E23100F3D015 /* EventsTableViewController.swift in Sources */,
