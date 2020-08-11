@@ -5,4 +5,5 @@ public enum AuthenticationError {
     case FIRAuthErrorCodeEmailAlreadyInUse
     case genericError
     case FIRAuthErrorCodeWrongPassword
+    case emailNotRegistred
 }

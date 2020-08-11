@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Iqa-Tp-3SE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q9V-CP-KHA">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -134,10 +134,10 @@
             </objects>
             <point key="canvasLocation" x="190" y="-388"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="Q6p-ag-BcX">
             <objects>
-                <viewController id="Q9V-CP-KHA" sceneMemberID="viewController">
+                <viewController id="Q9V-CP-KHA" customClass="LoginViewController" customModule="GoEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B7y-2U-UIN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -157,12 +157,12 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ltx-By-BMS">
                                 <rect key="frame" x="20" y="116" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aMr-dK-A8R">
                                 <rect key="frame" x="20" y="158" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" smartInsertDeleteType="no" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auC-pa-xt0">
                                 <rect key="frame" x="20" y="200" width="374" height="42"/>
@@ -179,16 +179,27 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="login:" destination="Q9V-CP-KHA" eventType="touchUpInside" id="BQS-xz-MzE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5a-P0-1Q0">
                                 <rect key="frame" x="8" y="250" width="398" height="30"/>
                                 <state key="normal" title="Esqueci minha senha">
                                     <color key="titleColor" red="0.0" green="0.4431372549" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="recoveryPassword:" destination="Q9V-CP-KHA" eventType="touchUpInside" id="cII-Po-JR6"/>
+                                </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="pkp-8W-E05">
+                                <rect key="frame" x="20" y="200" width="374" height="42"/>
+                                <color key="color" red="0.015686274510000001" green="0.4549019608" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="pkp-8W-E05" firstAttribute="top" secondItem="aMr-dK-A8R" secondAttribute="bottom" constant="8" id="52u-Xa-wDx"/>
                             <constraint firstItem="NTV-5V-Dob" firstAttribute="leading" secondItem="3mh-8F-0Pn" secondAttribute="leading" id="6hA-pM-IHZ"/>
                             <constraint firstItem="3mh-8F-0Pn" firstAttribute="trailing" secondItem="ltx-By-BMS" secondAttribute="trailing" constant="20" id="7pw-3l-NpS"/>
                             <constraint firstItem="auC-pa-xt0" firstAttribute="top" secondItem="aMr-dK-A8R" secondAttribute="bottom" constant="8" id="Fs4-fk-Lso"/>
@@ -197,8 +208,10 @@
                             <constraint firstItem="Hwt-mR-FV0" firstAttribute="top" secondItem="NTV-5V-Dob" secondAttribute="bottom" constant="34" id="Qje-q8-Trz"/>
                             <constraint firstItem="Hwt-mR-FV0" firstAttribute="leading" secondItem="3mh-8F-0Pn" secondAttribute="leading" constant="20" id="Quh-qy-CHu"/>
                             <constraint firstItem="Hwt-mR-FV0" firstAttribute="trailing" secondItem="NTV-5V-Dob" secondAttribute="trailing" id="Quh-wI-y1H"/>
+                            <constraint firstItem="3mh-8F-0Pn" firstAttribute="trailing" secondItem="pkp-8W-E05" secondAttribute="trailing" constant="20" id="Rf8-f8-5GI"/>
                             <constraint firstItem="NTV-5V-Dob" firstAttribute="top" secondItem="3mh-8F-0Pn" secondAttribute="top" id="UDW-4m-JX9"/>
                             <constraint firstItem="ltx-By-BMS" firstAttribute="leading" secondItem="3mh-8F-0Pn" secondAttribute="leading" constant="20" id="Wdg-k0-H00"/>
+                            <constraint firstItem="pkp-8W-E05" firstAttribute="height" secondItem="auC-pa-xt0" secondAttribute="height" multiplier="0.880952" constant="5" id="aLY-i0-WZZ"/>
                             <constraint firstItem="ltx-By-BMS" firstAttribute="top" secondItem="Hwt-mR-FV0" secondAttribute="bottom" constant="8" id="mbY-jC-dcY"/>
                             <constraint firstItem="auC-pa-xt0" firstAttribute="leading" secondItem="3mh-8F-0Pn" secondAttribute="leading" constant="20" id="mgJ-uH-ZnD"/>
                             <constraint firstItem="e5a-P0-1Q0" firstAttribute="top" secondItem="auC-pa-xt0" secondAttribute="bottom" constant="8" id="o3Z-SW-CBP"/>
@@ -207,13 +220,20 @@
                             <constraint firstItem="3mh-8F-0Pn" firstAttribute="trailing" secondItem="auC-pa-xt0" secondAttribute="trailing" constant="20" id="t12-ym-Chj"/>
                             <constraint firstItem="aMr-dK-A8R" firstAttribute="top" secondItem="ltx-By-BMS" secondAttribute="bottom" constant="8" id="tbJ-tv-MRW"/>
                             <constraint firstItem="3mh-8F-0Pn" firstAttribute="trailing" secondItem="e5a-P0-1Q0" secondAttribute="trailing" constant="8" id="vHn-1y-g8t"/>
+                            <constraint firstItem="pkp-8W-E05" firstAttribute="leading" secondItem="3mh-8F-0Pn" secondAttribute="leading" constant="20" id="xIj-Pi-qeE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3mh-8F-0Pn"/>
                     </view>
+                    <connections>
+                        <outlet property="btLogin" destination="auC-pa-xt0" id="8Dw-Tl-LAS"/>
+                        <outlet property="loading" destination="pkp-8W-E05" id="PiA-u0-hlj"/>
+                        <outlet property="tfEmail" destination="ltx-By-BMS" id="SND-VZ-OgQ"/>
+                        <outlet property="tfPassword" destination="aMr-dK-A8R" id="Aef-c4-O0f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="28U-AG-yyI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1109" y="-390"/>
+            <point key="canvasLocation" x="1108.6956521739132" y="-390.48913043478262"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="ofm-fd-7YU">

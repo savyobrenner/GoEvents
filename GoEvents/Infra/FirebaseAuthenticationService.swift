@@ -2,7 +2,7 @@ import Foundation
 import Firebase
 
 class FirebaseAuthenticationService: AuthenticationService {
-    private let auth = Auth.auth()
+    public let auth = Auth.auth()
     
     func createUser(email: String, password: String, onSuccess: @escaping (String) -> Void, onError: @escaping (AuthenticationError) -> Void) {
         auth.createUser(withEmail: email, password: password) { (user, error) in
@@ -24,14 +24,18 @@ class FirebaseAuthenticationService: AuthenticationService {
     
     func login(email: String, password: String, onSuccess: @escaping () -> Void, onError: @escaping (AuthenticationError) -> Void) {
         auth.signIn(withEmail: email, password: password) { (user, error) in
-            if error != nil {
+            if error == nil {
                 onSuccess()
             } else {
-                let tError = error.debugDescription
-                if tError == "FIRAuthErrorCodeInvalidEmail"{
-                    onError(.FIRAuthErrorCodeInvalidEmail)
-                } else if tError == "FIRAuthErrorCodeWrongPassword"{
+                let tError = error?.localizedDescription
+                if tError == "There is no user record corresponding to this identifier. The user may have been deleted."{
+                    onError(.emailNotRegistred)
+                } else if tError == "The password is invalid or the user does not have a password."{
                     onError(.FIRAuthErrorCodeWrongPassword)
+                } else if tError == "The email address is badly formatted."{
+                    onError(.FIRAuthErrorCodeInvalidEmail)
+                } else {
+                    onError(.genericError)
                 }
             }
         }
@@ -39,7 +43,7 @@ class FirebaseAuthenticationService: AuthenticationService {
     
     func isAlreadyLogged(onSucess: @escaping () -> Void) {
         auth.addStateDidChangeListener { (auth, user) in
-            if user != nil {
+            if user == nil {
                 onSucess()
             }
         }
