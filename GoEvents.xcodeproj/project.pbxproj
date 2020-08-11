@@ -23,6 +23,10 @@
 		29F4A1EA24E2E29000F3D015 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F4A1E924E2E29000F3D015 /* EventsTableViewCell.swift */; };
 		29F4A1EF24E2F01D00F3D015 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F4A1EE24E2F01D00F3D015 /* Loading.swift */; };
 		29F4A1F224E3046500F3D015 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29F4A1F124E3046500F3D015 /* GoogleService-Info.plist */; };
+		29F4A1F424E3080D00F3D015 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F4A1F324E3080D00F3D015 /* AuthenticationService.swift */; };
+		29F4A1F624E3092F00F3D015 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F4A1F524E3092F00F3D015 /* AuthenticationError.swift */; };
+		29F4A1F824E30AB600F3D015 /* FirebaseAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F4A1F724E30AB600F3D015 /* FirebaseAuthenticationService.swift */; };
+		29F4A1FC24E311C300F3D015 /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29F4A1FB24E311C300F3D015 /* FirebaseAuth.framework */; };
 		5C4AE2B8123DB6D6670C8748 /* Pods_GoEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B381BBAD188866D7C35E57B5 /* Pods_GoEvents.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +49,10 @@
 		29F4A1E924E2E29000F3D015 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
 		29F4A1EE24E2F01D00F3D015 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		29F4A1F124E3046500F3D015 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GOEvents/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		29F4A1F324E3080D00F3D015 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		29F4A1F524E3092F00F3D015 /* AuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
+		29F4A1F724E30AB600F3D015 /* FirebaseAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthenticationService.swift; sourceTree = "<group>"; };
+		29F4A1FB24E311C300F3D015 /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AFC296FE5856D847F627185 /* Pods-GoEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoEvents.release.xcconfig"; path = "Target Support Files/Pods-GoEvents/Pods-GoEvents.release.xcconfig"; sourceTree = "<group>"; };
 		B381BBAD188866D7C35E57B5 /* Pods_GoEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0EDC778297C4CC7A798B97 /* Pods-GoEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoEvents.debug.xcconfig"; path = "Target Support Files/Pods-GoEvents/Pods-GoEvents.debug.xcconfig"; sourceTree = "<group>"; };
@@ -55,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29F4A1FC24E311C300F3D015 /* FirebaseAuth.framework in Frameworks */,
 				5C4AE2B8123DB6D6670C8748 /* Pods_GoEvents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,6 +114,7 @@
 			children = (
 				29845AE724E2CCE3004B22A9 /* ClientFactory.swift */,
 				29845AEF24E2CF6D004B22A9 /* AlamofireEventsService.swift */,
+				29F4A1F724E30AB600F3D015 /* FirebaseAuthenticationService.swift */,
 			);
 			path = Infra;
 			sourceTree = "<group>";
@@ -135,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				29845AE324E2CC10004B22A9 /* DataError.swift */,
+				29F4A1F524E3092F00F3D015 /* AuthenticationError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -143,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				29845AE124E2CB9D004B22A9 /* EventsService.swift */,
+				29F4A1F324E3080D00F3D015 /* AuthenticationService.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -180,6 +192,7 @@
 		8CB914FD35DB06FE7337E6DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				29F4A1FB24E311C300F3D015 /* FirebaseAuth.framework */,
 				B381BBAD188866D7C35E57B5 /* Pods_GoEvents.framework */,
 			);
 			name = Frameworks;
@@ -310,12 +323,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29F4A1F624E3092F00F3D015 /* AuthenticationError.swift in Sources */,
+				29F4A1F824E30AB600F3D015 /* FirebaseAuthenticationService.swift in Sources */,
 				29845AE224E2CB9D004B22A9 /* EventsService.swift in Sources */,
 				29845ACB24E1AAB3004B22A9 /* GoEvents.xcdatamodeld in Sources */,
 				29845AF024E2CF6D004B22A9 /* AlamofireEventsService.swift in Sources */,
 				29845AC124E1AAB3004B22A9 /* AppDelegate.swift in Sources */,
 				29845AE424E2CC10004B22A9 /* DataError.swift in Sources */,
 				29845AE824E2CCE3004B22A9 /* ClientFactory.swift in Sources */,
+				29F4A1F424E3080D00F3D015 /* AuthenticationService.swift in Sources */,
 				29845AF424E2D232004B22A9 /* Injection.swift in Sources */,
 				29845AC324E1AAB3004B22A9 /* SceneDelegate.swift in Sources */,
 				29F4A1E824E2E23100F3D015 /* EventsTableViewController.swift in Sources */,
