@@ -10,7 +10,7 @@ enum HttpCodes: Int {
 
 class ClientFactory {
     
-    private let url = "hhttps://goevents-b64cb.firebaseio.com/Events.json"
+    private let url = "https://goevents-b64cb.firebaseio.com/Events.json"
     
     
     func create<ResponseType: Codable>(type: ResponseType.Type,onSuccess: @escaping (ResponseType) -> Void, onError: @escaping (DataError) -> Void) {
