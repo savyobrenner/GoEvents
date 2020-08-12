@@ -1042,23 +1042,31 @@
                                     <constraint firstAttribute="width" secondItem="dTQ-cq-VCl" secondAttribute="height" multiplier="15:8" id="jwZ-k4-ZKG"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 400,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Adj-T0-1Lu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 400,00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Adj-T0-1Lu">
                                 <rect key="frame" x="105" y="463" width="204" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="LKL-wb-utR">
+                                <rect key="frame" x="188" y="607" width="38" height="42"/>
+                                <color key="color" red="0.015686274510000001" green="0.4549019608" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="krA-Rc-bNA" firstAttribute="trailing" secondItem="D74-HX-jMu" secondAttribute="trailing" constant="21" id="0Do-zp-aRX"/>
                             <constraint firstItem="dTQ-cq-VCl" firstAttribute="top" secondItem="day-Xi-Kbd" secondAttribute="bottom" constant="19" id="2KJ-7F-Fx3"/>
                             <constraint firstItem="T8g-yK-9Ga" firstAttribute="top" secondItem="G83-GJ-xZq" secondAttribute="bottom" constant="8" id="85y-OY-9sU"/>
+                            <constraint firstItem="LKL-wb-utR" firstAttribute="height" secondItem="Ek8-le-F6n" secondAttribute="height" id="8rW-xZ-xbV"/>
                             <constraint firstItem="D74-HX-jMu" firstAttribute="top" secondItem="wDd-ea-XOp" secondAttribute="bottom" constant="8" id="ARP-L7-p9r"/>
                             <constraint firstItem="dTQ-cq-VCl" firstAttribute="leading" secondItem="krA-Rc-bNA" secondAttribute="leading" constant="87" id="AW8-H9-gLh"/>
                             <constraint firstItem="UnQ-Ph-bue" firstAttribute="leading" secondItem="krA-Rc-bNA" secondAttribute="leading" constant="20" id="Ahv-Hh-yeS"/>
+                            <constraint firstItem="LKL-wb-utR" firstAttribute="centerY" secondItem="Ek8-le-F6n" secondAttribute="centerY" id="AuD-Ex-Mvt"/>
                             <constraint firstItem="bYE-Vc-uWx" firstAttribute="top" secondItem="krA-Rc-bNA" secondAttribute="top" id="CpC-n4-v9c"/>
+                            <constraint firstItem="LKL-wb-utR" firstAttribute="width" secondItem="Ek8-le-F6n" secondAttribute="width" multiplier="0.101604" id="DN0-VW-zH4"/>
                             <constraint firstItem="day-Xi-Kbd" firstAttribute="top" secondItem="bYE-Vc-uWx" secondAttribute="bottom" id="GNb-yE-0OW"/>
+                            <constraint firstItem="LKL-wb-utR" firstAttribute="centerX" secondItem="TDu-0x-bVD" secondAttribute="centerX" id="HbV-Dw-cBd"/>
                             <constraint firstItem="krA-Rc-bNA" firstAttribute="bottom" secondItem="Ek8-le-F6n" secondAttribute="bottom" constant="67" id="KKi-IM-pqx"/>
                             <constraint firstItem="krA-Rc-bNA" firstAttribute="trailing" secondItem="G83-GJ-xZq" secondAttribute="trailing" constant="20" id="L6u-79-qnU"/>
                             <constraint firstItem="Gka-GK-kMR" firstAttribute="leading" secondItem="l6I-tq-WyQ" secondAttribute="trailing" constant="5" id="LFi-T3-Cdh"/>
@@ -1069,6 +1077,7 @@
                             <constraint firstItem="krA-Rc-bNA" firstAttribute="trailing" secondItem="Ek8-le-F6n" secondAttribute="trailing" constant="20" id="a1F-Rf-K5Z"/>
                             <constraint firstItem="krA-Rc-bNA" firstAttribute="trailing" secondItem="T8g-yK-9Ga" secondAttribute="trailing" constant="20" id="c3g-Xt-ArR"/>
                             <constraint firstItem="Adj-T0-1Lu" firstAttribute="leading" secondItem="krA-Rc-bNA" secondAttribute="leading" constant="105" id="clK-Vb-1Pk"/>
+                            <constraint firstItem="LKL-wb-utR" firstAttribute="leading" secondItem="Ek8-le-F6n" secondAttribute="trailing" constant="-206" id="fPK-wF-Oyp"/>
                             <constraint firstItem="bYE-Vc-uWx" firstAttribute="leading" secondItem="krA-Rc-bNA" secondAttribute="leading" constant="154" id="fbG-8Q-Frf"/>
                             <constraint firstItem="krA-Rc-bNA" firstAttribute="trailing" secondItem="dTQ-cq-VCl" secondAttribute="trailing" constant="87" id="ff3-UV-Una"/>
                             <constraint firstItem="UnQ-Ph-bue" firstAttribute="top" secondItem="T8g-yK-9Ga" secondAttribute="bottom" constant="8" id="gUN-ea-d3K"/>
@@ -1090,6 +1099,7 @@
                         <outlet property="btBuy" destination="Ek8-le-F6n" id="xST-99-jjS"/>
                         <outlet property="ivCard" destination="dTQ-cq-VCl" id="o1W-x5-lCa"/>
                         <outlet property="lbFinalPrice" destination="Adj-T0-1Lu" id="n6J-ff-Hl1"/>
+                        <outlet property="loading" destination="LKL-wb-utR" id="vwK-L6-p8n"/>
                         <outlet property="tfCVV" destination="D74-HX-jMu" id="l2E-f7-7f5"/>
                         <outlet property="tfCardHolderName" destination="T8g-yK-9Ga" id="Yq7-C5-69s"/>
                         <outlet property="tfCardNumber" destination="G83-GJ-xZq" id="bzj-gn-fAl"/>

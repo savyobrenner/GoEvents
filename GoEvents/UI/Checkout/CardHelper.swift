@@ -41,7 +41,7 @@ extension CardViewController: UITextFieldDelegate {
         
         if(cardNumberIsEmpty) {
             injection.alerts.showAlert(titulo: "Dado Inválido", mensagem: "O campo número do cartão está vazio", on: self)
-        } else if (cardNumberIsEmpty) {
+        } else if (cardHolderIsEmpty) {
             injection.alerts.showAlert(titulo: "Dado Inválido", mensagem: "O campo titular do cartão está vazio", on: self)
         } else if (month){
             injection.alerts.showAlert(titulo: "Dado inválido", mensagem: "O campo mês está vazio.", on: self)
@@ -55,7 +55,21 @@ extension CardViewController: UITextFieldDelegate {
     }
     
     func performPayment(){
-        
+        injection.database.addTicket(event: event, uid: injection.authenticationServices.currentUserUid(), name: name, onSuccess: {
+            self.injection.alerts.showAlertWithCompletion(titulo: "Compra com sucesso", mensagem: "A compra foi realizada com sucesso, cheque seus ingressos na tela 'Ingressos'.", on: self) {
+                self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+            }
+            self.stopLoading()
+        }) {
+            self.injection.alerts.showAlert(titulo: "Algo aconteceu", mensagem: "Não foi possível concluir a compra, tente novamente", on: self)
+            self.stopLoading()
+        }
+    }
+    
+    func stopLoading(){
+        self.loading.isHidden = true
+        self.btBuy.isHidden = false
+        self.loading.stopAnimating()
     }
 
 }

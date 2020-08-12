@@ -14,7 +14,6 @@ class TicketsNumberViewController: UIViewController {
     var event: Events!
     var quantity = 0
     var totalPrice: Double = 0
-    var displayPrice: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +39,6 @@ class TicketsNumberViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! CardViewController
         vc.event = event
-        vc.finalPrice = displayPrice
     }
     
     func validations(){
@@ -56,9 +54,9 @@ class TicketsNumberViewController: UIViewController {
             btMinus.tintColor = #colorLiteral(red: 0, green: 0.4431372549, blue: 0.737254902, alpha: 1)
         }
         totalPrice = Double(event.price * quantity)
-        displayPrice = String(format: "%.2f", totalPrice)
+        event.finalPrice = String(format: "%.2f", totalPrice)
         tfTicketsNumber.text = "\(quantity)"
-        finalPrice.text = "Valor total: R$ " + displayPrice
+        finalPrice.text = "Valor total: R$ " + event.finalPrice!
     }
     
     

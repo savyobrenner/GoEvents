@@ -10,4 +10,5 @@ struct Events: Codable {
     let price: Int
     let producer: String
     let image: String
+    var finalPrice: String?
 }
