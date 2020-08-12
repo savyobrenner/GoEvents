@@ -9,38 +9,25 @@ class FirebaseDatabaseService: DatabaseService {
         ref.child("Users").child(uid).setValue(["name": name, "email": email])
     }
     
-    func getName(uid: String) -> String {
+    func getName(uid: String, onSuccess: @escaping (String) -> Void) {
         
-        var name: String?
-
-        ref.child("Users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
-            
-            let value = snapshot.value as? NSDictionary
-            name = value?["name"] as? String ?? ""
-            
-        }) { (error) in
-            print(error.localizedDescription)
-        }
-        
-        return name!
+         ref.child("Users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                   
+                   let value = snapshot.value as? NSDictionary
+                   let name = value?["name"] as? String ?? ""
+                   onSuccess(name)
+               })
         
     }
     
-    func getEmail(uid: String) -> String {
-          
-        var email: String?
-
+    func getEmail(uid: String, onSuccess: @escaping (String) -> Void)  {
+    
         ref.child("Users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
             
             let value = snapshot.value as? NSDictionary
-            email = value?["email"] as? String ?? ""
-        }) { (error) in
-            print(error.localizedDescription)
-        }
-        
-        return email!
+            let email = value?["email"] as? String ?? ""
+            onSuccess(email)
+        })
       }
-      
-    
     
 }

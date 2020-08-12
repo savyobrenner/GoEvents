@@ -17,9 +17,9 @@ class ProfileViewController: UIViewController {
         loading.isHidden = true
     }
     override func viewWillAppear(_ animated: Bool) {
-        
         injection.authenticationServices.isAlreadyLogged(onSuccess: {
             self.loggedView.isHidden = false
+            self.getPersonalInfos()
         }) {
             self.loggedView.isHidden = true
         }
@@ -43,8 +43,12 @@ class ProfileViewController: UIViewController {
     
     func getPersonalInfos(){
         let uid = injection.authenticationServices.auth.currentUser?.uid
-        lbUserName.text = injection.database.getName(uid: uid!)
-        tfUserEmail.text = injection.database.getEmail(uid: uid!)
+        injection.database.getName(uid: uid!, onSuccess: { (name) in
+            self.lbUserName.text = name
+        })
+        injection.database.getEmail(uid: uid!) { (email) in
+            self.tfUserEmail.text = email
+        }
     }
     
     func stopLoading(){
