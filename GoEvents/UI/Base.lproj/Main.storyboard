@@ -948,10 +948,10 @@
             </objects>
             <point key="canvasLocation" x="-565" y="1093"/>
         </scene>
-        <!--View Controller-->
+        <!--Card View Controller-->
         <scene sceneID="7D2-dS-XzF">
             <objects>
-                <viewController id="oGY-ax-Omh" sceneMemberID="viewController">
+                <viewController id="oGY-ax-Omh" customClass="CardViewController" customModule="GoEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TDu-0x-bVD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -983,6 +983,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buy:" destination="oGY-ax-Omh" eventType="touchUpInside" id="e6O-nJ-8Dh"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nº do cartão" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G83-GJ-xZq">
                                 <rect key="frame" x="20" y="247" width="374" height="34"/>
@@ -997,6 +1000,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MÊS" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l6I-tq-WyQ">
                                 <rect key="frame" x="20" y="360" width="61" height="34"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="G7b-YU-jOD"/>
                                     <constraint firstAttribute="width" secondItem="l6I-tq-WyQ" secondAttribute="height" multiplier="61:34" id="pOI-Qn-ujs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1005,6 +1009,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ANO" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gka-GK-kMR">
                                 <rect key="frame" x="86" y="360" width="61" height="34"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Kjo-Uz-V6o"/>
                                     <constraint firstAttribute="width" secondItem="Gka-GK-kMR" secondAttribute="height" multiplier="61:34" id="La8-I1-0hC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1014,6 +1019,7 @@
                                 <rect key="frame" x="231" y="360" width="162" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="D74-HX-jMu" secondAttribute="height" multiplier="81:17" id="UmZ-Ix-51u"/>
+                                    <constraint firstAttribute="height" constant="34" id="mfO-T3-Qeh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1071,6 +1077,15 @@
                         <viewLayoutGuide key="safeArea" id="krA-Rc-bNA"/>
                     </view>
                     <navigationItem key="navigationItem" id="dLS-lp-bdG"/>
+                    <connections>
+                        <outlet property="btBuy" destination="Ek8-le-F6n" id="xST-99-jjS"/>
+                        <outlet property="ivCard" destination="dTQ-cq-VCl" id="o1W-x5-lCa"/>
+                        <outlet property="tfCVV" destination="D74-HX-jMu" id="l2E-f7-7f5"/>
+                        <outlet property="tfCardHolderName" destination="T8g-yK-9Ga" id="Yq7-C5-69s"/>
+                        <outlet property="tfCardNumber" destination="G83-GJ-xZq" id="bzj-gn-fAl"/>
+                        <outlet property="tfMonth" destination="l6I-tq-WyQ" id="LRX-Ve-vNn"/>
+                        <outlet property="tfYear" destination="Gka-GK-kMR" id="gus-fj-Xdf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RBB-aA-1j6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
