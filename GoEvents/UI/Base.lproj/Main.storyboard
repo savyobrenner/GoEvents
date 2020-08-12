@@ -121,7 +121,7 @@
                                     <outlet property="lbEventDate" destination="BSv-YU-iBZ" id="wBt-Eg-2e4"/>
                                     <outlet property="lbEventName" destination="eeM-G8-vLd" id="oii-co-jb9"/>
                                     <outlet property="lbTicketPrice" destination="20t-L7-OtZ" id="hMr-LW-qqv"/>
-                                    <segue destination="QyE-bj-h1b" kind="show" id="2yY-Rv-PzG"/>
+                                    <segue destination="QyE-bj-h1b" kind="show" identifier="eventDetails" id="2yY-Rv-PzG"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -617,10 +617,10 @@
             </objects>
             <point key="canvasLocation" x="1787" y="-45"/>
         </scene>
-        <!--View Controller-->
+        <!--Events Details View Controller-->
         <scene sceneID="3NB-bA-XZf">
             <objects>
-                <viewController id="QyE-bj-h1b" sceneMemberID="viewController">
+                <viewController id="QyE-bj-h1b" customClass="EventsDetailsViewController" customModule="GoEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ivN-wM-kvV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -730,6 +730,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buyTicket:" destination="QyE-bj-h1b" eventType="touchUpInside" id="0ww-gx-n0j"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="48348645_10156967999918824_1825570652254371840_o" translatesAutoresizingMaskIntoConstraints="NO" id="Anj-Gg-WAn">
                                 <rect key="frame" x="0.0" y="78" width="414" height="192"/>
@@ -737,17 +740,12 @@
                                     <constraint firstAttribute="width" secondItem="Anj-Gg-WAn" secondAttribute="height" multiplier="69:32" id="NX4-Ni-hOb"/>
                                 </constraints>
                             </imageView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="4nQ-FX-Ztr">
-                                <rect key="frame" x="187.66666666666666" y="619" width="39" height="42"/>
-                                <color key="color" red="0.015686274510000001" green="0.4549019608" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="7zU-fi-fdm" firstAttribute="centerX" secondItem="oeU-DM-e4y" secondAttribute="centerX" id="2MU-hc-8eG"/>
                             <constraint firstItem="5kY-ae-6C8" firstAttribute="top" secondItem="Vjs-FN-AZh" secondAttribute="bottom" constant="33" id="2N1-91-S05"/>
                             <constraint firstItem="Vjs-FN-AZh" firstAttribute="trailing" secondItem="hiu-vl-1cC" secondAttribute="trailing" id="3bc-1Y-7cG"/>
-                            <constraint firstItem="4nQ-FX-Ztr" firstAttribute="centerY" secondItem="Xxa-6b-juw" secondAttribute="centerY" id="3vD-qL-XYR"/>
                             <constraint firstItem="23c-5u-14r" firstAttribute="trailing" secondItem="7zU-fi-fdm" secondAttribute="trailing" constant="20" id="54U-Nz-AB7"/>
                             <constraint firstItem="Vjs-FN-AZh" firstAttribute="trailing" secondItem="7zU-fi-fdm" secondAttribute="trailing" id="566-ZA-h1L"/>
                             <constraint firstItem="23c-5u-14r" firstAttribute="trailing" secondItem="Vjs-FN-AZh" secondAttribute="trailing" constant="20" id="6QW-GB-0f0"/>
@@ -759,7 +757,6 @@
                             <constraint firstItem="Vjs-FN-AZh" firstAttribute="leading" secondItem="hiu-vl-1cC" secondAttribute="leading" id="CGv-au-Y0Q"/>
                             <constraint firstItem="hiu-vl-1cC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="uRE-Te-7CX" secondAttribute="bottom" constant="8" id="Cfz-cL-X2B"/>
                             <constraint firstItem="uRE-Te-7CX" firstAttribute="leading" secondItem="Anj-Gg-WAn" secondAttribute="leading" id="Cwm-RT-VLf"/>
-                            <constraint firstItem="4nQ-FX-Ztr" firstAttribute="centerX" secondItem="Xxa-6b-juw" secondAttribute="centerX" id="FXA-BO-RYu"/>
                             <constraint firstItem="yLo-rk-0EY" firstAttribute="centerY" secondItem="Z8L-V5-EOY" secondAttribute="centerY" id="IgQ-Bh-G0c"/>
                             <constraint firstItem="23c-5u-14r" firstAttribute="trailing" secondItem="Bc2-gE-zNs" secondAttribute="trailing" constant="20" id="K56-f3-9d2"/>
                             <constraint firstItem="Vjs-FN-AZh" firstAttribute="leading" secondItem="Z8L-V5-EOY" secondAttribute="leading" id="KOj-jU-RDX"/>
@@ -768,7 +765,6 @@
                             <constraint firstItem="Z8L-V5-EOY" firstAttribute="leading" secondItem="23c-5u-14r" secondAttribute="leading" constant="20" id="Nam-dp-543"/>
                             <constraint firstItem="7vB-c1-fpk" firstAttribute="leading" secondItem="23c-5u-14r" secondAttribute="leading" constant="20" id="Nas-2I-pEu"/>
                             <constraint firstItem="Vjs-FN-AZh" firstAttribute="leading" secondItem="Bc2-gE-zNs" secondAttribute="leading" id="OMk-mN-Jmd"/>
-                            <constraint firstItem="4nQ-FX-Ztr" firstAttribute="centerX" secondItem="ivN-wM-kvV" secondAttribute="centerX" id="Ppv-jX-xcx"/>
                             <constraint firstItem="uRE-Te-7CX" firstAttribute="leading" secondItem="oeU-DM-e4y" secondAttribute="leading" id="PsY-HQ-0oy"/>
                             <constraint firstItem="Vjs-FN-AZh" firstAttribute="centerX" secondItem="q0q-oD-RrK" secondAttribute="centerX" id="Q5p-r6-gP2"/>
                             <constraint firstItem="q0q-oD-RrK" firstAttribute="leading" secondItem="23c-5u-14r" secondAttribute="leading" constant="154" id="QFV-0I-veI"/>
@@ -786,14 +782,12 @@
                             <constraint firstItem="Z8L-V5-EOY" firstAttribute="top" secondItem="7vB-c1-fpk" secondAttribute="bottom" constant="8" id="Zdu-uh-Muc"/>
                             <constraint firstItem="HMS-gM-soF" firstAttribute="leading" secondItem="23c-5u-14r" secondAttribute="leading" constant="20" id="a9Z-pb-QMp"/>
                             <constraint firstItem="7zU-fi-fdm" firstAttribute="leading" secondItem="23c-5u-14r" secondAttribute="leading" constant="20" id="aKM-oS-E8t"/>
-                            <constraint firstItem="4nQ-FX-Ztr" firstAttribute="width" secondItem="Xxa-6b-juw" secondAttribute="width" multiplier="0.104278" id="aao-sU-ERX"/>
                             <constraint firstItem="uRE-Te-7CX" firstAttribute="top" secondItem="Bc2-gE-zNs" secondAttribute="bottom" constant="8" id="agX-bO-lwu"/>
                             <constraint firstAttribute="bottom" secondItem="Vjs-FN-AZh" secondAttribute="bottom" constant="160" id="an9-3C-YZi"/>
                             <constraint firstItem="hiu-vl-1cC" firstAttribute="leading" secondItem="23c-5u-14r" secondAttribute="leading" constant="20" id="cfK-NJ-ZJ3"/>
                             <constraint firstItem="uRE-Te-7CX" firstAttribute="leading" secondItem="4aE-uO-F4F" secondAttribute="leading" id="d3D-9A-UDW"/>
                             <constraint firstItem="q0q-oD-RrK" firstAttribute="top" secondItem="23c-5u-14r" secondAttribute="top" id="dYb-O0-C4O"/>
                             <constraint firstItem="uRE-Te-7CX" firstAttribute="leading" secondItem="Q3N-ZU-7Tq" secondAttribute="leading" id="eec-6I-Yiv"/>
-                            <constraint firstItem="4nQ-FX-Ztr" firstAttribute="height" secondItem="Xxa-6b-juw" secondAttribute="height" id="fI7-pU-tqm"/>
                             <constraint firstItem="Vjs-FN-AZh" firstAttribute="centerX" secondItem="4aE-uO-F4F" secondAttribute="centerX" id="gxs-rD-ay1"/>
                             <constraint firstItem="Bc2-gE-zNs" firstAttribute="top" secondItem="Z8L-V5-EOY" secondAttribute="bottom" constant="8" id="haw-wV-V7P"/>
                             <constraint firstItem="7zU-fi-fdm" firstAttribute="top" secondItem="hiu-vl-1cC" secondAttribute="bottom" constant="8" id="kNi-oI-dah"/>
@@ -818,10 +812,19 @@
                         <viewLayoutGuide key="safeArea" id="23c-5u-14r"/>
                     </view>
                     <navigationItem key="navigationItem" id="qlK-fG-Ss9"/>
+                    <connections>
+                        <outlet property="ivImage" destination="Anj-Gg-WAn" id="h30-M3-A9K"/>
+                        <outlet property="lbDate" destination="Z8L-V5-EOY" id="Zth-6e-0us"/>
+                        <outlet property="lbEventName" destination="7vB-c1-fpk" id="qzI-vb-fdA"/>
+                        <outlet property="lbLocation" destination="Bc2-gE-zNs" id="0gu-GD-FFo"/>
+                        <outlet property="lbPrice" destination="yLo-rk-0EY" id="3gM-jd-TuH"/>
+                        <outlet property="lbProducerName" destination="HMS-gM-soF" id="I34-XV-g8P"/>
+                        <outlet property="tvDescription" destination="7zU-fi-fdm" id="3n9-7A-nj8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="46W-cT-7js" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-565.21739130434787" y="287.77173913043481"/>
+            <point key="canvasLocation" x="-565" y="347"/>
         </scene>
     </scenes>
     <resources>
