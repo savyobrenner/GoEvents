@@ -33,7 +33,7 @@ class EventsTableViewController: UITableViewController {
             let indexPath = tableView.indexPathForSelectedRow!
             let event = events[indexPath.row]
             let vc = segue.destination as! EventsDetailsViewController
-            prepareInformationForSegue(vc: vc, event: event)
+            vc.event = event
             tableView.deselectRow(at: indexPath, animated: true)
         }
     }

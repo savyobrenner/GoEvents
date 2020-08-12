@@ -732,7 +732,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buyTicket:" destination="QyE-bj-h1b" eventType="touchUpInside" id="0ww-gx-n0j"/>
-                                    <segue destination="yjn-Wa-2I8" kind="show" id="Oef-VA-mBL"/>
+                                    <segue destination="yjn-Wa-2I8" kind="show" identifier="ticketsNumber" id="Oef-VA-mBL"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="48348645_10156967999918824_1825570652254371840_o" translatesAutoresizingMaskIntoConstraints="NO" id="Anj-Gg-WAn">
@@ -827,10 +827,10 @@
             </objects>
             <point key="canvasLocation" x="-565" y="347"/>
         </scene>
-        <!--View Controller-->
+        <!--Tickets Number View Controller-->
         <scene sceneID="dAo-Xr-lfH">
             <objects>
-                <viewController id="yjn-Wa-2I8" sceneMemberID="viewController">
+                <viewController id="yjn-Wa-2I8" customClass="TicketsNumberViewController" customModule="GoEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="19r-lt-a1L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -860,6 +860,9 @@
                                 <state key="normal" image="minus" catalog="system">
                                     <color key="titleColor" red="0.0" green="0.4431372549" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="minusTicket:" destination="yjn-Wa-2I8" eventType="touchUpInside" id="rPM-iK-Yha"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JT0-ij-ZZq">
                                 <rect key="frame" x="376" y="104" width="18" height="22"/>
@@ -867,11 +870,16 @@
                                 <state key="normal" image="plus" catalog="system">
                                     <color key="titleColor" red="0.0" green="0.4431372549" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="plusTicket:" destination="yjn-Wa-2I8" eventType="touchUpInside" id="bUN-nb-0Ft"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4ss-bS-ohv">
                                 <rect key="frame" x="330" y="97" width="37" height="34"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4ss-bS-ohv" secondAttribute="height" multiplier="37:34" id="J5H-Yz-zSa"/>
+                                    <constraint firstAttribute="height" constant="34" id="gTR-f2-mjj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -890,6 +898,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="goToCardCheckout:" destination="yjn-Wa-2I8" eventType="touchUpInside" id="kWz-1s-My5"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor total: R$ 0,00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzH-xH-lm7">
                                 <rect key="frame" x="167.66666666666663" y="564" width="226.33333333333337" height="30"/>
@@ -924,6 +935,13 @@
                         <viewLayoutGuide key="safeArea" id="wvs-Nt-4ud"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ean-pN-BPj"/>
+                    <connections>
+                        <outlet property="btGoToCardCheckout" destination="3zn-e8-oaC" id="elg-Sd-dAt"/>
+                        <outlet property="btMinus" destination="7sq-Zr-3bQ" id="SvY-36-o6A"/>
+                        <outlet property="btPlus" destination="JT0-ij-ZZq" id="24b-8A-bIx"/>
+                        <outlet property="finalPrice" destination="tzH-xH-lm7" id="D52-43-XS2"/>
+                        <outlet property="tfTicketsNumber" destination="4ss-bS-ohv" id="Xxb-8Z-QgM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sts-ur-cJA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

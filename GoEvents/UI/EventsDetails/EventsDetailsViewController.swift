@@ -11,15 +11,8 @@ class EventsDetailsViewController: UIViewController {
     @IBOutlet weak var lbPrice: UILabel!
     @IBOutlet weak var tvDescription: UITextView!
     
-    var image: String?
-    var eventName: String?
-    var date: String?
-    var location: String?
-    var producerName: String?
-    var price: Int?
-    var eventDescription: String?
-    var startTime: String?
-    var endTime: String?
+    var event: Events!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,18 +23,25 @@ class EventsDetailsViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ticketsNumber"{
+            let vc = segue.destination as! TicketsNumberViewController
+            vc.event = event
+        }
+    }
+    
+    
     func prepareMainScreen(){
-        
-        let dateFormatted = "\(date!) das \(startTime!)h as \(endTime!)h"
+        let dateFormatted = "\(event.date) das \(event.startTime)h as \(event.endTime)h"
         
         ivImage.kf.indicatorType = .activity
-        ivImage.kf.setImage(with: URL(string: image!))
-        lbEventName.text = eventName!
+        ivImage.kf.setImage(with:URL(string: event.image))
+        lbEventName.text = event.eventName
         lbDate.text = dateFormatted
-        lbLocation.text = location!
-        lbProducerName.text = producerName!
-        lbPrice.text = "R$\(price!)"
-        tvDescription.text = eventDescription!
+        lbLocation.text = event.location
+        lbProducerName.text = event.producer
+        lbPrice.text = "R$\(event.price)"
+        tvDescription.text = event.eventDescription
         
     }
     

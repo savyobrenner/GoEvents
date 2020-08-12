@@ -17,7 +17,7 @@
 		2907E87F24E35C1000A1B3D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2907E87E24E35C1000A1B3D2 /* Assets.xcassets */; };
 		2907E88324E3681E00A1B3D2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2907E88224E3681E00A1B3D2 /* ProfileViewController.swift */; };
 		2907E88624E39E5100A1B3D2 /* EventsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2907E88524E39E5000A1B3D2 /* EventsDetailsViewController.swift */; };
-		2907E88824E3A0F800A1B3D2 /* EventsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2907E88724E3A0F800A1B3D2 /* EventsHelper.swift */; };
+		2907E88B24E3A5F800A1B3D2 /* TicketsNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2907E88A24E3A5F800A1B3D2 /* TicketsNumberViewController.swift */; };
 		29845AC124E1AAB3004B22A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29845AC024E1AAB3004B22A9 /* AppDelegate.swift */; };
 		29845AC324E1AAB3004B22A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29845AC224E1AAB3004B22A9 /* SceneDelegate.swift */; };
 		29845AC824E1AAB3004B22A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29845AC624E1AAB3004B22A9 /* Main.storyboard */; };
@@ -51,7 +51,7 @@
 		2907E87E24E35C1000A1B3D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2907E88224E3681E00A1B3D2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		2907E88524E39E5000A1B3D2 /* EventsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailsViewController.swift; sourceTree = "<group>"; };
-		2907E88724E3A0F800A1B3D2 /* EventsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsHelper.swift; sourceTree = "<group>"; };
+		2907E88A24E3A5F800A1B3D2 /* TicketsNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsNumberViewController.swift; sourceTree = "<group>"; };
 		29845ABD24E1AAB3004B22A9 /* GoEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29845AC024E1AAB3004B22A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29845AC224E1AAB3004B22A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +125,14 @@
 			path = EventsDetails;
 			sourceTree = "<group>";
 		};
+		2907E88924E3A5CC00A1B3D2 /* Checkout */ = {
+			isa = PBXGroup;
+			children = (
+				2907E88A24E3A5F800A1B3D2 /* TicketsNumberViewController.swift */,
+			);
+			path = Checkout;
+			sourceTree = "<group>";
+		};
 		29845AB424E1AAB2004B22A9 = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +185,7 @@
 		29845AEB24E2CDF7004B22A9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2907E88924E3A5CC00A1B3D2 /* Checkout */,
 				2907E88424E39E3800A1B3D2 /* EventsDetails */,
 				2907E88124E3680C00A1B3D2 /* Profile */,
 				2907E88024E367F800A1B3D2 /* Register */,
@@ -235,7 +244,6 @@
 		29F4A1ED24E2EF8D00F3D015 /* Events */ = {
 			isa = PBXGroup;
 			children = (
-				2907E88724E3A0F800A1B3D2 /* EventsHelper.swift */,
 				29F4A1E724E2E23100F3D015 /* EventsTableViewController.swift */,
 				29F4A1E924E2E29000F3D015 /* EventsTableViewCell.swift */,
 			);
@@ -390,6 +398,7 @@
 				29845AE224E2CB9D004B22A9 /* EventsService.swift in Sources */,
 				29845ACB24E1AAB3004B22A9 /* GoEvents.xcdatamodeld in Sources */,
 				29845AF024E2CF6D004B22A9 /* AlamofireEventsService.swift in Sources */,
+				2907E88B24E3A5F800A1B3D2 /* TicketsNumberViewController.swift in Sources */,
 				2907E87624E3460900A1B3D2 /* DatabaseService.swift in Sources */,
 				29845AC124E1AAB3004B22A9 /* AppDelegate.swift in Sources */,
 				29845AE424E2CC10004B22A9 /* DataError.swift in Sources */,
@@ -403,7 +412,6 @@
 				2907E87024E326F200A1B3D2 /* RegisterViewController.swift in Sources */,
 				2907E88324E3681E00A1B3D2 /* ProfileViewController.swift in Sources */,
 				29F4A1E824E2E23100F3D015 /* EventsTableViewController.swift in Sources */,
-				2907E88824E3A0F800A1B3D2 /* EventsHelper.swift in Sources */,
 				2907E87224E3270300A1B3D2 /* LoginViewController.swift in Sources */,
 				29845ADF24E2CAE8004B22A9 /* Events.swift in Sources */,
 				2907E87B24E34EB200A1B3D2 /* RegisterHelper.swift in Sources */,
