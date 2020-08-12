@@ -9,19 +9,30 @@ class CardViewController: UIViewController {
     @IBOutlet weak var tfYear: UITextField!
     @IBOutlet weak var tfCVV: UITextField!
     @IBOutlet weak var btBuy: UIButton!
+    @IBOutlet weak var lbFinalPrice: UILabel!
     
+    
+    var event: Events!
+    var finalPrice: String!
+
+    let injection = Injection()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tfMonth.delegate = self
-        tfYear.delegate = self
-        tfCVV.delegate = self
-        tfCardNumber.delegate = self
+        setTfDelegate()
+        lbFinalPrice.text = finalPrice
     }
     
     
     @IBAction func buy(_ sender: Any) {
         
+    }
+    
+    func setTfDelegate(){
+        tfMonth.delegate = self
+        tfYear.delegate = self
+        tfCVV.delegate = self
+        tfCardNumber.delegate = self
     }
     
 

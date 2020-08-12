@@ -1089,6 +1089,7 @@
                     <connections>
                         <outlet property="btBuy" destination="Ek8-le-F6n" id="xST-99-jjS"/>
                         <outlet property="ivCard" destination="dTQ-cq-VCl" id="o1W-x5-lCa"/>
+                        <outlet property="lbFinalPrice" destination="Adj-T0-1Lu" id="n6J-ff-Hl1"/>
                         <outlet property="tfCVV" destination="D74-HX-jMu" id="l2E-f7-7f5"/>
                         <outlet property="tfCardHolderName" destination="T8g-yK-9Ga" id="Yq7-C5-69s"/>
                         <outlet property="tfCardNumber" destination="G83-GJ-xZq" id="bzj-gn-fAl"/>

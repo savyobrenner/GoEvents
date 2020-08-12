@@ -7,13 +7,10 @@ extension LoginViewController {
         
         if(emailIsEmpty) {
             injection.alerts.showAlert(titulo: "Dado Inválido", mensagem: "O campo email está vazio", on: self)
-            self.stopLoading()
         } else if (passwordIsEmpty) {
             injection.alerts.showAlert(titulo: "Dado Inválido", mensagem: "O campo senha está vazio", on: self)
-            self.stopLoading()
         } else if (tfPassword.text!.count < 6){
             injection.alerts.showAlert(titulo: "Dado inválido", mensagem: "A senha deve conter pelo menos 6 caracteres.", on: self)
-            self.stopLoading()
         } else {
             self.performUserLogin()
         }
