@@ -26,7 +26,7 @@ extension LoginViewController {
         self.injection.authenticationServices.login(email: email, password: password, onSuccess: {
             
             if self.injection.authenticationServices.auth.currentUser!.isEmailVerified {
-                print("passou")
+                self.dismiss(animated: true, completion: nil)
                 self.stopLoading()
             } else {
                 self.injection.alerts.showAlert(titulo: "Email não verificado", mensagem: "Para acessar sua conta, favor ativar sua conta de email.", on: self)

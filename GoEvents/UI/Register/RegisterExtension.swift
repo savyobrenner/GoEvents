@@ -46,7 +46,7 @@ extension RegisterViewController {
                
                self.injection.authenticationServices.verificationEmail {
                    
-                   self.injection.alerts.showAlertWithDismiss(titulo: "Conta criada com suceeso!", mensagem: "Sua conta foi criada com sucesso, um email de confirmação foi enviado para o email informado, o login será possível após a confirmação.", on: self) {
+                   self.injection.alerts.showAlertWithCompletion(titulo: "Conta criada com suceeso!", mensagem: "Sua conta foi criada com sucesso, um email de confirmação foi enviado para o email informado, o login será possível após a confirmação.", on: self) {
                        self.dismiss(animated: true, completion: nil)
                    }
                    

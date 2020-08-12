@@ -381,6 +381,7 @@
                         <outlet property="lbTicketsNumber" destination="6Aj-mh-Z3O" id="7Oj-cv-bUw"/>
                         <outlet property="lbUserName" destination="vOd-Rf-r1x" id="wR7-4i-BCN"/>
                         <outlet property="loading" destination="7aU-ZW-l0H" id="JuP-ck-Ily"/>
+                        <outlet property="loggedView" destination="fkT-oA-xym" id="E91-hL-Odk"/>
                         <outlet property="tfUserEmail" destination="x0v-2t-dzf" id="LAy-VP-S2a"/>
                     </connections>
                 </viewController>

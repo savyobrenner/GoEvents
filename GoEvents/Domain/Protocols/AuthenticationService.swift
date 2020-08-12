@@ -6,7 +6,7 @@ protocol AuthenticationService {
     
     func login (email: String, password: String, onSuccess: @escaping () -> Void, onError: @escaping (AuthenticationError) -> Void)
     
-    func isAlreadyLogged(onSucess: @escaping () -> Void)
+    func isAlreadyLogged(onSuccess: @escaping ()->Void, onError: @escaping ()-> Void)
     
     func logoutUser(onSuccess: () -> Void, onError: () -> Void) -> Void
     

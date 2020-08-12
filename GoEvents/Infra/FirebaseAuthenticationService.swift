@@ -41,10 +41,12 @@ class FirebaseAuthenticationService: AuthenticationService {
         }
     }
     
-    func isAlreadyLogged(onSucess: @escaping () -> Void) {
+    func isAlreadyLogged(onSuccess: @escaping () -> Void, onError: @escaping () -> Void) {
         auth.addStateDidChangeListener { (auth, user) in
-            if user == nil {
-                onSucess()
+            if user != nil {
+                onSuccess()
+            } else {
+                onError()
             }
         }
     }
