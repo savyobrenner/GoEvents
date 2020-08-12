@@ -42,7 +42,7 @@ extension RegisterViewController {
               let password = tfPassword.text!
            
            injection.authenticationServices.createUser(email: email, password: password, onSuccess: { (uid) in
-               self.injection.database.savePersonalInformations(name: name, uid: uid)
+            self.injection.database.savePersonalInformations(name: name, uid: uid, email: email)
                
                self.injection.authenticationServices.verificationEmail {
                    

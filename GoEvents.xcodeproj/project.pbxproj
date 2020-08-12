@@ -15,6 +15,7 @@
 		2907E87B24E34EB200A1B3D2 /* RegisterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2907E87A24E34EB200A1B3D2 /* RegisterExtension.swift */; };
 		2907E87D24E3569B00A1B3D2 /* LoginExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2907E87C24E3569B00A1B3D2 /* LoginExtension.swift */; };
 		2907E87F24E35C1000A1B3D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2907E87E24E35C1000A1B3D2 /* Assets.xcassets */; };
+		2907E88324E3681E00A1B3D2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2907E88224E3681E00A1B3D2 /* ProfileViewController.swift */; };
 		29845AC124E1AAB3004B22A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29845AC024E1AAB3004B22A9 /* AppDelegate.swift */; };
 		29845AC324E1AAB3004B22A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29845AC224E1AAB3004B22A9 /* SceneDelegate.swift */; };
 		29845AC824E1AAB3004B22A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29845AC624E1AAB3004B22A9 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		2907E87A24E34EB200A1B3D2 /* RegisterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterExtension.swift; sourceTree = "<group>"; };
 		2907E87C24E3569B00A1B3D2 /* LoginExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginExtension.swift; sourceTree = "<group>"; };
 		2907E87E24E35C1000A1B3D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2907E88224E3681E00A1B3D2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		29845ABD24E1AAB3004B22A9 /* GoEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29845AC024E1AAB3004B22A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29845AC224E1AAB3004B22A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,12 +90,27 @@
 		2907E87924E34BB400A1B3D2 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				2907E87A24E34EB200A1B3D2 /* RegisterExtension.swift */,
-				2907E86F24E326F200A1B3D2 /* RegisterViewController.swift */,
 				2907E87C24E3569B00A1B3D2 /* LoginExtension.swift */,
 				2907E87124E3270300A1B3D2 /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		2907E88024E367F800A1B3D2 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				2907E87A24E34EB200A1B3D2 /* RegisterExtension.swift */,
+				2907E86F24E326F200A1B3D2 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		2907E88124E3680C00A1B3D2 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2907E88224E3681E00A1B3D2 /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		29845AB424E1AAB2004B22A9 = {
@@ -148,6 +165,8 @@
 		29845AEB24E2CDF7004B22A9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2907E88124E3680C00A1B3D2 /* Profile */,
+				2907E88024E367F800A1B3D2 /* Register */,
 				2907E87924E34BB400A1B3D2 /* Login */,
 				29F4A1ED24E2EF8D00F3D015 /* Events */,
 				29F4A1F024E2F04600F3D015 /* Commons */,
@@ -367,6 +386,7 @@
 				29845AC324E1AAB3004B22A9 /* SceneDelegate.swift in Sources */,
 				2907E87D24E3569B00A1B3D2 /* LoginExtension.swift in Sources */,
 				2907E87024E326F200A1B3D2 /* RegisterViewController.swift in Sources */,
+				2907E88324E3681E00A1B3D2 /* ProfileViewController.swift in Sources */,
 				29F4A1E824E2E23100F3D015 /* EventsTableViewController.swift in Sources */,
 				2907E87224E3270300A1B3D2 /* LoginViewController.swift in Sources */,
 				29845ADF24E2CAE8004B22A9 /* Events.swift in Sources */,
