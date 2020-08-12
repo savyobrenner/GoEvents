@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oGY-ax-Omh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HG0-Ee-NNb">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -1022,7 +1022,7 @@
                                     <constraint firstAttribute="height" constant="34" id="mfO-T3-Qeh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vencimento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnQ-Ph-bue">
                                 <rect key="frame" x="20" y="331" width="90" height="21"/>
@@ -1042,6 +1042,12 @@
                                     <constraint firstAttribute="width" secondItem="dTQ-cq-VCl" secondAttribute="height" multiplier="15:8" id="jwZ-k4-ZKG"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 400,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Adj-T0-1Lu">
+                                <rect key="frame" x="105" y="463" width="204" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -1062,17 +1068,20 @@
                             <constraint firstItem="G83-GJ-xZq" firstAttribute="leading" secondItem="krA-Rc-bNA" secondAttribute="leading" constant="20" id="ZUF-P8-4Kw"/>
                             <constraint firstItem="krA-Rc-bNA" firstAttribute="trailing" secondItem="Ek8-le-F6n" secondAttribute="trailing" constant="20" id="a1F-Rf-K5Z"/>
                             <constraint firstItem="krA-Rc-bNA" firstAttribute="trailing" secondItem="T8g-yK-9Ga" secondAttribute="trailing" constant="20" id="c3g-Xt-ArR"/>
+                            <constraint firstItem="Adj-T0-1Lu" firstAttribute="leading" secondItem="krA-Rc-bNA" secondAttribute="leading" constant="105" id="clK-Vb-1Pk"/>
                             <constraint firstItem="bYE-Vc-uWx" firstAttribute="leading" secondItem="krA-Rc-bNA" secondAttribute="leading" constant="154" id="fbG-8Q-Frf"/>
                             <constraint firstItem="krA-Rc-bNA" firstAttribute="trailing" secondItem="dTQ-cq-VCl" secondAttribute="trailing" constant="87" id="ff3-UV-Una"/>
                             <constraint firstItem="UnQ-Ph-bue" firstAttribute="top" secondItem="T8g-yK-9Ga" secondAttribute="bottom" constant="8" id="gUN-ea-d3K"/>
                             <constraint firstItem="T8g-yK-9Ga" firstAttribute="leading" secondItem="krA-Rc-bNA" secondAttribute="leading" constant="20" id="gd5-er-U9F"/>
                             <constraint firstItem="l6I-tq-WyQ" firstAttribute="top" secondItem="UnQ-Ph-bue" secondAttribute="bottom" constant="8" id="gvp-Ha-BxB"/>
+                            <constraint firstItem="krA-Rc-bNA" firstAttribute="trailing" secondItem="Adj-T0-1Lu" secondAttribute="trailing" constant="105" id="h3B-7A-3St"/>
                             <constraint firstAttribute="trailing" secondItem="day-Xi-Kbd" secondAttribute="trailing" id="hNW-FQ-EyC"/>
                             <constraint firstItem="Ek8-le-F6n" firstAttribute="leading" secondItem="krA-Rc-bNA" secondAttribute="leading" constant="20" id="hfX-ai-RbA"/>
                             <constraint firstItem="krA-Rc-bNA" firstAttribute="trailing" secondItem="wDd-ea-XOp" secondAttribute="trailing" constant="21" id="idd-hK-NeK"/>
                             <constraint firstItem="l6I-tq-WyQ" firstAttribute="leading" secondItem="krA-Rc-bNA" secondAttribute="leading" constant="20" id="k2q-JR-yOu"/>
                             <constraint firstItem="krA-Rc-bNA" firstAttribute="trailing" secondItem="bYE-Vc-uWx" secondAttribute="trailing" constant="154" id="mJh-PQ-G7O"/>
                             <constraint firstItem="G83-GJ-xZq" firstAttribute="top" secondItem="dTQ-cq-VCl" secondAttribute="bottom" constant="20" id="oY5-Uh-YmT"/>
+                            <constraint firstItem="Ek8-le-F6n" firstAttribute="top" secondItem="Adj-T0-1Lu" secondAttribute="bottom" constant="96" id="tGp-Xa-G9r"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="krA-Rc-bNA"/>
                     </view>

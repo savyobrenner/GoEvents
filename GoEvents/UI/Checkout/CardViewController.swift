@@ -16,6 +16,7 @@ class CardViewController: UIViewController {
         tfMonth.delegate = self
         tfYear.delegate = self
         tfCVV.delegate = self
+        tfCardNumber.delegate = self
     }
     
     
