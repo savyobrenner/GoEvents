@@ -33,6 +33,7 @@
 		29845AF024E2CF6D004B22A9 /* AlamofireEventsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29845AEF24E2CF6D004B22A9 /* AlamofireEventsService.swift */; };
 		29845AF424E2D232004B22A9 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29845AF324E2D232004B22A9 /* Injection.swift */; };
 		29B7E11024E4C95900A5C747 /* TicketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B7E10F24E4C95900A5C747 /* TicketCell.swift */; };
+		29B7E11424E4F45200A5C747 /* TicketsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B7E11324E4F45200A5C747 /* TicketsDetailsViewController.swift */; };
 		29F4A1E824E2E23100F3D015 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F4A1E724E2E23100F3D015 /* EventsTableViewController.swift */; };
 		29F4A1EA24E2E29000F3D015 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F4A1E924E2E29000F3D015 /* EventsTableViewCell.swift */; };
 		29F4A1EF24E2F01D00F3D015 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F4A1EE24E2F01D00F3D015 /* Loading.swift */; };
@@ -73,6 +74,7 @@
 		29845AEF24E2CF6D004B22A9 /* AlamofireEventsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireEventsService.swift; sourceTree = "<group>"; };
 		29845AF324E2D232004B22A9 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		29B7E10F24E4C95900A5C747 /* TicketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCell.swift; sourceTree = "<group>"; };
+		29B7E11324E4F45200A5C747 /* TicketsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsDetailsViewController.swift; sourceTree = "<group>"; };
 		29F4A1E724E2E23100F3D015 /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		29F4A1E924E2E29000F3D015 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
 		29F4A1EE24E2F01D00F3D015 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				2907E89324E4C35900A1B3D2 /* TicketsTableViewController.swift */,
 				29B7E10F24E4C95900A5C747 /* TicketCell.swift */,
+				29B7E11324E4F45200A5C747 /* TicketsDetailsViewController.swift */,
 			);
 			path = Tickets;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				29F4A1F424E3080D00F3D015 /* AuthenticationService.swift in Sources */,
 				2907E88624E39E5100A1B3D2 /* EventsDetailsViewController.swift in Sources */,
 				29845AF424E2D232004B22A9 /* Injection.swift in Sources */,
+				29B7E11424E4F45200A5C747 /* TicketsDetailsViewController.swift in Sources */,
 				2907E87824E3498800A1B3D2 /* FirebaseDatabaseService.swift in Sources */,
 				29845AC324E1AAB3004B22A9 /* SceneDelegate.swift in Sources */,
 				2907E87D24E3569B00A1B3D2 /* LoginHelper.swift in Sources */,

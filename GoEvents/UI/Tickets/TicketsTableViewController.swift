@@ -27,7 +27,7 @@ class TicketsTableViewController: UITableViewController {
         
         cell.lbEventName.text = eventName[indexPath.row]
         cell.lbEventDate.text = date[indexPath.row]
-        cell.lbTicketsQuantity.text = String(quantity[indexPath.row])
+        cell.lbTicketsQuantity.text = "Ingressos comprados: " + String(quantity[indexPath.row])
         cell.configImage(with: image[indexPath.row])
 
         return cell
