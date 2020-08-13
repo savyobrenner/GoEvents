@@ -67,4 +67,11 @@ class FirebaseDatabaseService: DatabaseService {
         }
     }
     
+    func getNumberOfTicker(uid: String, onSuccess: @escaping (UInt) -> Void) {
+        
+        ref.child("Users").child(uid).child("Tickets").observeSingleEvent(of: .value) { (snapshot) in
+            onSuccess(snapshot.childrenCount)
+        }
+    }
+    
 }

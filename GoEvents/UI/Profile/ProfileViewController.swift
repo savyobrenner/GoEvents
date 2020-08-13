@@ -51,6 +51,9 @@ class ProfileViewController: UIViewController {
         injection.database.getEmail(uid: uid!) { (email) in
             self.tfUserEmail.text = email
         }
+        injection.database.getNumberOfTicker(uid: uid!) { (number) in
+            self.lbTicketsNumber.text = String(number)
+        }
     }
     
     func stopLoading(){

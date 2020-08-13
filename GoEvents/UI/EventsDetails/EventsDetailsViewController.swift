@@ -55,9 +55,8 @@ class EventsDetailsViewController: UIViewController {
             self.btBuy.setTitle("Comprar Ingresso", for: .normal)
         }) {
             self.btBuy.isUserInteractionEnabled = false
-            self.btBuy.backgroundColor = .systemGroupedBackground
+            self.btBuy.backgroundColor = .gray
             self.btBuy.setTitle("Logue para continuar com a compra", for: .normal)
-            self.btBuy.setTitleColor(#colorLiteral(red: 0, green: 0.5356216431, blue: 0.7853057384, alpha: 1), for: .normal)
         }
     }
     

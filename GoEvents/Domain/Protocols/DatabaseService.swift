@@ -11,5 +11,7 @@ protocol DatabaseService {
     func addTicket(event: Events, uid: String, onSuccess: @escaping ()-> Void, onError: @escaping ()-> Void)
     
     func getAllTickets(uid: String, onSuccess: @escaping ([String],[String],[Int],[String]) -> Void, onError: @escaping ()-> Void)
+    
+    func getNumberOfTicker(uid: String, onSuccess: @escaping (UInt) -> Void)
         
 }
