@@ -33,6 +33,18 @@ class TicketsTableViewController: UITableViewController {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let uid = injection.authenticationServices.currentUserUid()
+        if segue.identifier == "ticketsDetails"{
+            let vc = segue.destination as! TicketsDetailsViewController
+            let indexPath = tableView.indexPathForSelectedRow
+            vc.date = date[indexPath!.row]
+            vc.name = eventName[indexPath!.row]
+            vc.uid = uid
+            tableView.deselectRow(at: indexPath!, animated: true)
+        }
+    }
+    
     func retrieveData(){
         let uid = injection.authenticationServices.currentUserUid()
                injection.database.getAllTickets(uid: uid, onSuccess: { (name, date, quantity, image)  in

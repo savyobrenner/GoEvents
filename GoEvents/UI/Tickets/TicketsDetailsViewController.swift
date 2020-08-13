@@ -13,6 +13,10 @@ class TicketsDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let personalCode = uid + name + date
+        ivQrCode.image = generateQRCode(from: personalCode)
+        lbName.text = name
+        lbDate.text = date
 
     }
 
