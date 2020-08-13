@@ -10,6 +10,7 @@ target 'GoEvents' do
   pod 'Kingfisher'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'IQKeyboardManagerSwift'
 
 
 end
