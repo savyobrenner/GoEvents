@@ -1200,10 +1200,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="ivImage" destination="9IV-uy-u2s" id="JKv-Ei-sWk"/>
-                                    <outlet property="lbDate" destination="z8x-Zm-KMU" id="0nE-ki-seU"/>
-                                    <outlet property="lbEventName" destination="6l2-yj-I7x" id="mWb-Wa-nw1"/>
-                                    <outlet property="lbTicketsQuantity" destination="a9p-ao-UGt" id="2zG-JX-ECz"/>
+                                    <outlet property="ivEvent" destination="9IV-uy-u2s" id="iXt-3s-c3l"/>
+                                    <outlet property="lbEventDate" destination="z8x-Zm-KMU" id="i3C-e5-4j0"/>
+                                    <outlet property="lbEventName" destination="6l2-yj-I7x" id="ttn-Ir-vOd"/>
+                                    <outlet property="lbTicketsQuantity" destination="a9p-ao-UGt" id="DKb-10-5U8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -1,4 +1,5 @@
 import UIKit
+import Kingfisher
 
 class TicketCell: UITableViewCell {
     
@@ -16,12 +17,8 @@ class TicketCell: UITableViewCell {
 
     }
     
-    func prepare(with event: Events){
-        let quantity = Int(event.finalPrice!)! / event.price
-        let url = URL(string: event.image)
-        lbEventName.text = event.eventName
-        lbEventDate.text = event.date
-        lbTicketsQuantity.text = "\(quantity) ingresso(s)."
+    func configImage(with url: String){
+        let url = URL(string: url)
         ivEvent.kf.indicatorType = .activity
         ivEvent.kf.setImage(with: url)
     }

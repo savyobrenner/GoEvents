@@ -42,9 +42,9 @@ class FirebaseDatabaseService: DatabaseService {
         }
       }
     
-    func getAllTickets(uid: String, onSuccess: @escaping ([String],[String],[Int],[String],[String]) -> Void, onError: @escaping ()-> Void){
+    func getAllTickets(uid: String, onSuccess: @escaping ([String],[String],[Int],[String]) -> Void, onError: @escaping ()-> Void){
         
-        var eventName:[String] = [], date:[String] = [], price:[Int] = [], image:[String] = [], finalPrice:[String] = []
+        var eventName:[String] = [], date:[String] = [], quantity:[Int] = [], image:[String] = []
         
         ref.child("Users").child(uid).child("Tickets").observe(.value, with: { (snapshot) in
             for data in snapshot.children.allObjects as! [DataSnapshot] {
@@ -54,13 +54,15 @@ class FirebaseDatabaseService: DatabaseService {
                 let eventDate = userObjecg!["date"] as! String
                 date.append(eventDate)
                 let eventPrice = userObjecg!["price"] as! Int
-                price.append(eventPrice)
-                let eventImage = userObjecg!["imagem"] as! String
-                image.append(eventImage)
                 let eventFinalPrice = userObjecg!["finalPrice"] as! String
-                finalPrice.append(eventFinalPrice)
+                let eventImage = userObjecg!["image"] as! String
+                image.append(eventImage)
+                print(eventFinalPrice)
+                let intFinalPrice = Int(Double(eventFinalPrice)!)
+                let eventQuantity = intFinalPrice / eventPrice
+                quantity.append(eventQuantity)
             }
-            onSuccess(eventName, date, price, image, finalPrice)
+            onSuccess(eventName, date, quantity, image)
         }) { (error) in
             print(error.localizedDescription)
         }
