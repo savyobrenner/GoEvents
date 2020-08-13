@@ -9,6 +9,7 @@ class TicketsDetailsViewController: UIViewController {
     
     var name: String!, date: String!, uid: String!
     
+    
     let injection = Injection()
 
     override func viewDidLoad() {

@@ -815,6 +815,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="qlK-fG-Ss9"/>
                     <connections>
+                        <outlet property="btBuy" destination="Xxa-6b-juw" id="GWs-Vm-04N"/>
                         <outlet property="ivImage" destination="Anj-Gg-WAn" id="h30-M3-A9K"/>
                         <outlet property="lbDate" destination="Z8L-V5-EOY" id="Zth-6e-0us"/>
                         <outlet property="lbEventName" destination="7vB-c1-fpk" id="qzI-vb-fdA"/>

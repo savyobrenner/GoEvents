@@ -10,13 +10,16 @@ class EventsDetailsViewController: UIViewController {
     @IBOutlet weak var lbProducerName: UILabel!
     @IBOutlet weak var lbPrice: UILabel!
     @IBOutlet weak var tvDescription: UITextView!
+    @IBOutlet weak var btBuy: UIButton!
     
     var event: Events!
 
-
+    let injection = Injection()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareMainScreen()
+        checkUser()
     }
     
     @IBAction func buyTicket(_ sender: Any) {
@@ -43,6 +46,19 @@ class EventsDetailsViewController: UIViewController {
         lbPrice.text = "R$\(event.price)"
         tvDescription.text = event.eventDescription
         
+    }
+    
+    func checkUser(){
+        injection.authenticationServices.isAlreadyLogged(onSuccess: {
+            self.btBuy.isUserInteractionEnabled = true
+            self.btBuy.backgroundColor = #colorLiteral(red: 0, green: 0.5356216431, blue: 0.7853057384, alpha: 1)
+            self.btBuy.setTitle("Comprar Ingresso", for: .normal)
+        }) {
+            self.btBuy.isUserInteractionEnabled = false
+            self.btBuy.backgroundColor = .systemGroupedBackground
+            self.btBuy.setTitle("Logue para continuar com a compra", for: .normal)
+            self.btBuy.setTitleColor(#colorLiteral(red: 0, green: 0.5356216431, blue: 0.7853057384, alpha: 1), for: .normal)
+        }
     }
     
 }

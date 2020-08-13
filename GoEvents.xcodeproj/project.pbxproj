@@ -150,9 +150,16 @@
 			children = (
 				2907E89324E4C35900A1B3D2 /* TicketsTableViewController.swift */,
 				29B7E10F24E4C95900A5C747 /* TicketCell.swift */,
-				29B7E11324E4F45200A5C747 /* TicketsDetailsViewController.swift */,
 			);
 			path = Tickets;
+			sourceTree = "<group>";
+		};
+		2914A15624E50070006A22AD /* TicketsDetails */ = {
+			isa = PBXGroup;
+			children = (
+				29B7E11324E4F45200A5C747 /* TicketsDetailsViewController.swift */,
+			);
+			path = TicketsDetails;
 			sourceTree = "<group>";
 		};
 		29845AB424E1AAB2004B22A9 = {
@@ -207,6 +214,7 @@
 		29845AEB24E2CDF7004B22A9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2914A15624E50070006A22AD /* TicketsDetails */,
 				2907E89224E4C33C00A1B3D2 /* Tickets */,
 				2907E88924E3A5CC00A1B3D2 /* Checkout */,
 				2907E88424E39E3800A1B3D2 /* EventsDetails */,

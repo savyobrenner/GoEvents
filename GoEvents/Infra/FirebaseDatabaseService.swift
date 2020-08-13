@@ -57,7 +57,6 @@ class FirebaseDatabaseService: DatabaseService {
                 let eventFinalPrice = userObjecg!["finalPrice"] as! String
                 let eventImage = userObjecg!["image"] as! String
                 image.append(eventImage)
-                print(eventFinalPrice)
                 let intFinalPrice = Int(Double(eventFinalPrice)!)
                 let eventQuantity = intFinalPrice / eventPrice
                 quantity.append(eventQuantity)
