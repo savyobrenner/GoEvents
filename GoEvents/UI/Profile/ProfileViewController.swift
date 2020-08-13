@@ -15,7 +15,9 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loading.isHidden = true
+        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         injection.authenticationServices.isAlreadyLogged(onSuccess: {
             self.loggedView.isHidden = false

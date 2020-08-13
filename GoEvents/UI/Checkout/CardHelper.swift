@@ -55,7 +55,7 @@ extension CardViewController: UITextFieldDelegate {
     }
     
     func performPayment(){
-        injection.database.addTicket(event: event, uid: injection.authenticationServices.currentUserUid(), name: name, onSuccess: {
+        injection.database.addTicket(event: event, uid: injection.authenticationServices.currentUserUid(), onSuccess: {
             self.injection.alerts.showAlertWithCompletion(titulo: "Compra com sucesso", mensagem: "A compra foi realizada com sucesso, cheque seus ingressos na tela 'Ingressos'.", on: self) {
                 self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
             }

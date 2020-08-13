@@ -1114,7 +1114,7 @@
         <!--Ingressos-->
         <scene sceneID="cCg-Oz-iYB">
             <objects>
-                <tableViewController id="3CE-NK-eXu" customClass="EventsTableViewController" customModule="GoEvents" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="3CE-NK-eXu" customClass="TicketsTableViewController" customModule="GoEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="n6w-Ka-AM6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1199,6 +1199,12 @@
                                         <constraint firstItem="6l2-yj-I7x" firstAttribute="top" secondItem="9IV-uy-u2s" secondAttribute="top" id="itM-1Q-eAR"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ivImage" destination="9IV-uy-u2s" id="JKv-Ei-sWk"/>
+                                    <outlet property="lbDate" destination="z8x-Zm-KMU" id="0nE-ki-seU"/>
+                                    <outlet property="lbEventName" destination="6l2-yj-I7x" id="mWb-Wa-nw1"/>
+                                    <outlet property="lbTicketsQuantity" destination="a9p-ao-UGt" id="2zG-JX-ECz"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
