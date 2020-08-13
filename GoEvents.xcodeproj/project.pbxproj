@@ -21,6 +21,7 @@
 		2907E88F24E4575500A1B3D2 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2907E88E24E4575500A1B3D2 /* CardViewController.swift */; };
 		2907E89124E45A8A00A1B3D2 /* CardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2907E89024E45A8A00A1B3D2 /* CardHelper.swift */; };
 		2907E89424E4C35900A1B3D2 /* TicketsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2907E89324E4C35900A1B3D2 /* TicketsTableViewController.swift */; };
+		2907E89624E4C43C00A1B3D2 /* TicketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2907E89524E4C43C00A1B3D2 /* TicketCell.swift */; };
 		29845AC124E1AAB3004B22A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29845AC024E1AAB3004B22A9 /* AppDelegate.swift */; };
 		29845AC324E1AAB3004B22A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29845AC224E1AAB3004B22A9 /* SceneDelegate.swift */; };
 		29845AC824E1AAB3004B22A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29845AC624E1AAB3004B22A9 /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 		2907E88E24E4575500A1B3D2 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		2907E89024E45A8A00A1B3D2 /* CardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHelper.swift; sourceTree = "<group>"; };
 		2907E89324E4C35900A1B3D2 /* TicketsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsTableViewController.swift; sourceTree = "<group>"; };
+		2907E89524E4C43C00A1B3D2 /* TicketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCell.swift; sourceTree = "<group>"; };
 		29845ABD24E1AAB3004B22A9 /* GoEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29845AC024E1AAB3004B22A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29845AC224E1AAB3004B22A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				2907E89324E4C35900A1B3D2 /* TicketsTableViewController.swift */,
+				2907E89524E4C43C00A1B3D2 /* TicketCell.swift */,
 			);
 			path = Tickets;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				2907E89424E4C35900A1B3D2 /* TicketsTableViewController.swift in Sources */,
 				29845ADF24E2CAE8004B22A9 /* Events.swift in Sources */,
 				2907E87B24E34EB200A1B3D2 /* RegisterHelper.swift in Sources */,
+				2907E89624E4C43C00A1B3D2 /* TicketCell.swift in Sources */,
 				29F4A1EF24E2F01D00F3D015 /* Loading.swift in Sources */,
 				2907E87424E3360900A1B3D2 /* Alerts.swift in Sources */,
 				29F4A1EA24E2E29000F3D015 /* EventsTableViewCell.swift in Sources */,
