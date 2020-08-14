@@ -28,6 +28,19 @@ class ProfileViewController: UIViewController {
         }
     }
     
+    @IBAction func loginWithGoogle(_ sender: Any) {
+        
+        injection.alerts.showAlert(titulo: "Em breve", mensagem: "Em breve será possível realizar o login com o Google.", on: self)
+        
+    }
+    
+    @IBAction func loginWithFacebook(_ sender: Any) {
+        
+        injection.alerts.showAlert(titulo: "Em breve", mensagem: "Em breve será possível realizar o login com o Facebook.", on: self)
+        
+    }
+    
+    
     @IBAction func logOut(_ sender: Any) {
         loading.isHidden = false
         loading.startAnimating()
