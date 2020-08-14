@@ -104,8 +104,8 @@
 		2907E87924E34BB400A1B3D2 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				2907E87C24E3569B00A1B3D2 /* LoginHelper.swift */,
 				2907E87124E3270300A1B3D2 /* LoginViewController.swift */,
+				2907E87C24E3569B00A1B3D2 /* LoginHelper.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -113,8 +113,8 @@
 		2907E88024E367F800A1B3D2 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				2907E87A24E34EB200A1B3D2 /* RegisterHelper.swift */,
 				2907E86F24E326F200A1B3D2 /* RegisterViewController.swift */,
+				2907E87A24E34EB200A1B3D2 /* RegisterHelper.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
