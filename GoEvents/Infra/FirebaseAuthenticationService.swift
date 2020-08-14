@@ -44,7 +44,11 @@ class FirebaseAuthenticationService: AuthenticationService {
     func isAlreadyLogged(onSuccess: @escaping () -> Void, onError: @escaping () -> Void) {
         auth.addStateDidChangeListener { (auth, user) in
             if user != nil {
-                onSuccess()
+                if user!.isEmailVerified {
+                    onSuccess()
+                } else {
+                    onError()
+                }
             } else {
                 onError()
             }

@@ -41,14 +41,19 @@ extension CardViewController: UITextFieldDelegate {
         
         if(cardNumberIsEmpty) {
             injection.alerts.showAlert(titulo: "Dado Inválido", mensagem: "O campo número do cartão está vazio", on: self)
+            self.stopLoading()
         } else if (cardHolderIsEmpty) {
             injection.alerts.showAlert(titulo: "Dado Inválido", mensagem: "O campo titular do cartão está vazio", on: self)
+            self.stopLoading()
         } else if (month){
             injection.alerts.showAlert(titulo: "Dado inválido", mensagem: "O campo mês está vazio.", on: self)
+            self.stopLoading()
         } else if (year){
             injection.alerts.showAlert(titulo: "Dado inválido", mensagem: "O campo ano está vazio.", on: self)
+            self.stopLoading()
         }else if (cvv){
             injection.alerts.showAlert(titulo: "Dado inválido", mensagem: "O campo CVV está vazio.", on: self)
+            self.stopLoading()
         } else {
             self.performPayment()
         }

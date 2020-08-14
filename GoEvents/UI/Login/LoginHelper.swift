@@ -7,23 +7,23 @@ extension LoginViewController {
         
         if(emailIsEmpty) {
             injection.alerts.showAlert(titulo: "Dado Inválido", mensagem: "O campo email está vazio", on: self)
+            self.stopLoading()
         } else if (passwordIsEmpty) {
             injection.alerts.showAlert(titulo: "Dado Inválido", mensagem: "O campo senha está vazio", on: self)
+            self.stopLoading()
         } else if (tfPassword.text!.count < 6){
             injection.alerts.showAlert(titulo: "Dado inválido", mensagem: "A senha deve conter pelo menos 6 caracteres.", on: self)
+            self.stopLoading()
         } else {
             self.performUserLogin()
         }
-        self.stopLoading()
     }
     
     func performUserLogin(){
         let email = tfEmail.text!
         let password = tfPassword.text!
-        startLoading()
         
         self.injection.authenticationServices.login(email: email, password: password, onSuccess: {
-            
             if self.injection.authenticationServices.auth.currentUser!.isEmailVerified {
                 self.dismiss(animated: true, completion: nil)
                 self.stopLoading()
