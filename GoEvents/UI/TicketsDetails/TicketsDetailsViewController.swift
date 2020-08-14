@@ -22,6 +22,7 @@ class TicketsDetailsViewController: UIViewController {
     }
 
     func generateQRCode(from string: String) -> UIImage? {
+        
         let data = string.data(using: String.Encoding.ascii)
 
         if let filter = CIFilter(name: "CIQRCodeGenerator") {

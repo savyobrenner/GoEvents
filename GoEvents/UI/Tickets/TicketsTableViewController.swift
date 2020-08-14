@@ -1,5 +1,4 @@
 import UIKit
-import Kingfisher
 
 class TicketsTableViewController: UITableViewController {
     
