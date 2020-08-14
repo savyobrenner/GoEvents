@@ -46,7 +46,7 @@ class EventsTableViewController: UITableViewController {
                      self.tableView.reloadData()
                 self.injection.loading.stopLoading(element: self.spinner)
                  }) { (error) in
-                     print(error)
+                    self.injection.alerts.showAlert(titulo: "Algo aconteceu", mensagem: "Não foi possível recuperar os eventos, tente novamente!", on: self)
                  }
              }
     }
