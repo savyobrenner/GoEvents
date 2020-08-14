@@ -20,6 +20,7 @@ extension LoginViewController {
     func performUserLogin(){
         let email = tfEmail.text!
         let password = tfPassword.text!
+        startLoading()
         
         self.injection.authenticationServices.login(email: email, password: password, onSuccess: {
             
