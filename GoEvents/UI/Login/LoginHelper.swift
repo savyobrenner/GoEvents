@@ -14,6 +14,7 @@ extension LoginViewController {
         } else {
             self.performUserLogin()
         }
+        self.stopLoading()
     }
     
     func performUserLogin(){
@@ -65,14 +66,12 @@ extension LoginViewController {
         }) { (error) in
             if error == .emailNotRegistred {
                 self.injection.alerts.showAlert(titulo: "Email incorreto", mensagem: "Endereço de email informado não se encontra em nosso banco de dados.", on: self)
-                self.stopLoading()
             } else if error == .FIRAuthErrorCodeInvalidEmail {
                 self.injection.alerts.showAlert(titulo: "Email incorreto", mensagem: "Endereço de email incorreto, verifique se segue padrão: example@example.com!", on: self)
-                self.stopLoading()
             } else if error == .genericError {
                 self.injection.alerts.showAlert(titulo: "Algo aconteceu", mensagem: "Não foi possível realizar a solicitação, por favor tente novamente!", on: self)
-                self.stopLoading()
             }
+            self.stopLoading()
         }
     }
     
